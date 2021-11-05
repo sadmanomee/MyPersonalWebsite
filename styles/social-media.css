@@ -1,0 +1,20 @@
+.custom-social-media-links{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width:380px;
+}
+
+.custom-social-media-links li{
+    list-style: none;
+}
+
+.custom-social-media-links li a{
+    display: inline-block;
+    color: #000; 
+    font-size: 22pt;
+}
+
+.custom-social-media-links a:hover{
+    transform: translate(0, -10px);
+}

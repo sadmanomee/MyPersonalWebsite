@@ -20,9 +20,6 @@
     <!-- ultra font (google font) -->
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
 	
-	<!-- merriweather font (google font) -->
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
-	
     <!-- icons -->
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -30,97 +27,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
     <!-- custom css files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/social-media.css">
+    <link rel="stylesheet" href="styles/education-timeline.css">
     <style>
-        body::before{
-            display: block;
-            content: '';
-            height: 60px;
-        }
-        .custom-nav{
-            line-height: 2em;
-            border-top: solid 3px #FFF;
-            border-bottom: solid 3px #FFF;
-            font-weight: 700;
-            letter-spacing: 0.09em;
-            text-transform: uppercase;
-            font-family: 'Open Sans Condensed', sans-serif;
-        }
-        .custom-section-header{
-            font-family: 'Ultra', serif;
-            font-size: 36pt;
-        }
-        .custom-starter-text{
-            font-family: 'Open Sans Condensed', sans-serif;
-            font-weight: 700;
-        }
-        .custom-paragraph-text{
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        .custom-social-media-links{
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
-			width:380px;
-        }
-
-        .custom-social-media-links li{
-            list-style: none;
-        }
-
-        .custom-social-media-links li a{
-			display: inline-block;
-            color: #000; 
-            font-size: 22pt;
-        }
-
-        .custom-social-media-links a:hover{
-            transform: translate(0, -10px);
-        }
-
-        .education-timeline ul li{
-            list-style: none;
-            /* border-style: solid; */
-            /* border-radius: 10px; */
-            /* border-width: 5px; */
-            background-color: #FFFFFF;
-            margin-bottom: 20px;
-            box-shadow: 10px 10px 5px #aaaaaa;
-        }
-
-        .education-timeline ul li:last-child{
-            margin-bottom: 0px;
-        }
-
-        @media only screen and (min-width: 760px){
-            .education-timeline-uofsc::before{
-                content: '';
-                height: 165px;
-                width: 5px;
-                position:absolute;
-                background-color: #5a5e63;
-                transform: translate(-43px, 90px);
-            }
-            .education-timeline ul li::before{
-                content: '';
-                height: 20px;
-                width: 30px;
-                position:absolute;
-                background-color: #5a5e63;
-                border-radius: 50%;
-                transform: translate(-55px, 65px);
-            }
-
-            .education-timeline ul li:nth-child(1):hover:before{
-                background-color: #000;
-                transition: 0.5s;
-            }
-
-            .education-timeline ul li:nth-child(2):hover:before{
-                background-color: #FF0000;
-                transition: 0.5s;
-            }
-        }
+        
     </style>
 </head>
 <body>

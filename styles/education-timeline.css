@@ -1,0 +1,43 @@
+.education-timeline ul li{
+    list-style: none;
+    /* border-style: solid; */
+    /* border-radius: 10px; */
+    /* border-width: 5px; */
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.education-timeline ul li:last-child{
+    margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 760px){
+    .education-timeline-uofsc::before{
+        content: '';
+        height: 165px;
+        width: 5px;
+        position:absolute;
+        background-color: #5a5e63;
+        transform: translate(-43px, 90px);
+    }
+    .education-timeline ul li::before{
+        content: '';
+        height: 20px;
+        width: 30px;
+        position:absolute;
+        background-color: #5a5e63;
+        border-radius: 50%;
+        transform: translate(-55px, 65px);
+    }
+
+    .education-timeline ul li:nth-child(1):hover:before{
+        background-color: #000;
+        transition: 0.5s;
+    }
+
+    .education-timeline ul li:nth-child(2):hover:before{
+        background-color: #FF0000;
+        transition: 0.5s;
+    }
+}

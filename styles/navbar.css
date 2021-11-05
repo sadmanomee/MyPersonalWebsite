@@ -1,0 +1,9 @@
+.custom-nav{
+    line-height: 2em;
+    border-top: solid 3px #FFF;
+    border-bottom: solid 3px #FFF;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}

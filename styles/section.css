@@ -1,0 +1,12 @@
+.custom-section-header{
+    font-family: 'Ultra', serif;
+    font-size: 36pt;
+}
+.custom-starter-text{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+}
+.custom-paragraph-text{
+    text-align: justify;
+    text-justify: inter-word;
+}
