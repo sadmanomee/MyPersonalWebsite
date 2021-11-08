@@ -1,0 +1,17 @@
+.experience-timeline ul li{
+    list-style: none;
+    border: 1px solid rgba(0,0,0,.125);
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.experience-timeline ul li:last-child{
+    margin-bottom: 0px;
+}
+
+.experience-text h4, .experience-text h5, .experience-text h6{
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-weight: 700;
+}
+

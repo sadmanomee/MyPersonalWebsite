@@ -2,6 +2,11 @@
     font-family: 'Ultra', serif;
     font-size: 36pt;
 }
+
+.custom-section-sub-header{
+    font-family: 'Ultra', serif;
+    font-size: 26pt;
+}
 .custom-starter-text{
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 700;

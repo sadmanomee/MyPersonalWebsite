@@ -1,8 +1,6 @@
 .education-timeline ul li{
     list-style: none;
-    /* border-style: solid; */
-    /* border-radius: 10px; */
-    /* border-width: 5px; */
+    border: 1px solid rgba(0,0,0,.125);
     background-color: #FFFFFF;
     margin-bottom: 20px;
     box-shadow: 10px 10px 5px #aaaaaa;
@@ -40,4 +38,9 @@
         background-color: #FF0000;
         transition: 0.5s;
     }
+}
+
+.education-text h4, .education-text h5, .education-text h6{
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-weight: 700;
 }
