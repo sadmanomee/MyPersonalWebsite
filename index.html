@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="styles/education.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/publications.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
     <style>
         
@@ -41,6 +42,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark py-3 fixed-top">
+        <!--
+            navbar           : bootstrap navbar styles
+            navbar-expand-md : full navbar is shown if screen size >= medium, menu icon otherwise
+            bg-dark          : dark background of navbar
+            navbar-dark      : navbar text color follows dark mode
+            py-3             : padding - top + bottom - level 3
+            fixed-top        : fixes navbar on top while scrolling
+        -->
         <div class="container">
             <button 
                 class="navbar-toggler" 
@@ -52,7 +61,16 @@
             </button>
 
             <div class="collapse navbar-collapse custom-nav" id="navmenu">
-                <ul class="navbar-nav ms-auto">
+                <!--
+                    collapse        : navbar collapsing style
+                    navbar-collapse : navbar collapses into menu icon when screen size is small
+                    custom-nav      : extra navbar styles written in navbar.css
+                -->
+                <ul class="navbar-nav mx-auto">
+                    <!--
+                        navbar-nav : arranges item in bootstrap navbar style
+                        ms-auto    : margin - left + right - auto
+                    -->
                     <li class="nav-item">
                         <a href="#bio" class="nav-link">Bio</a>
                     </li>
@@ -87,25 +105,44 @@
     </section>
 
     <section id="bio" class="p-5">
+        <!--
+            padding : level 5 on all sides
+        -->
         <div class="container">
             <div class="row align-items-center justify-content-between">
+                <!--
+                    row                     : bootstrap grid class (represents each row)
+                    align-items-center      : aligns items in center
+                    justify-content-between : for column content justification
+                -->
                 <div class="col-md-5 custom-section-header">
+                    <!--
+                        col-md-5              : space taken by that column (5 out of 12 spaces) allotted for each row
+                        custom-section-header : extra styles written in section.css
+                    -->
                     Biography
                 </div>
                 <div class="col-md-7 p-5">
                     <h2 class="custom-starter-text">
+                        <!--
+                            custom-starter-text : extra styles written in section.css
+                        -->
                         Hi, I am Sadman Sadeed Omee.
                     </h2>
                     <p class="custom-paragraph-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus incidunt error sapiente molestiae! 
-                        Officiis sed nobis, natus, dolores laboriosam, voluptatum vel quas quo porro commodi alias officia tempora. 
-                        Fugiat necessitatibus, unde temporibus eaque non voluptate rem, nobis dolore assumenda beatae cum sint iure 
-                        architecto sunt natus ad officiis corporis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus incidunt error sapiente molestiae! 
-                        Officiis sed nobis, natus, dolores laboriosam, voluptatum vel quas quo porro commodi alias officia tempora. 
-                        Fugiat necessitatibus, unde temporibus eaque non voluptate rem, nobis dolore assumenda beatae cum sint iure 
-                        architecto sunt natus ad officiis corporis!
+                        <!--
+                            custom-paragraph-text : extra styles written in section.css
+                        -->
+                        I am a Ph.D. Student in the Department of Computer Science and Engineering at the University of South Carolina. 
+                        I am conducting my research in the <a href="http://mleg.cse.sc.edu/" target="_blank" style="text-decoration: none;">Machine Learning and Evolution Laboratory</a> 
+                        where I work as a Graduate Research Assistant under the supervision of <a href="https://scholar.google.com/citations?user=_iD3nyMAAAAJ&hl=en" target="_blank" style="text-decoration: none;">Dr. Jianjun Hu</a>. 
+                        I am born and raised in Bangladesh. I got my B.S. in Computer Science and Engineering from Bangladesh University of Engineering and Technology. 
+                        My aim is to become an effective and impactful <a href="" target="_blank" style="text-decoration: none;">Deep Learning</a> Researcher.
                     </p>
 					<ul class="custom-social-media-links">
+                        <!--
+                            custom-social-media-links : extra styles written in social-media.css
+                        -->
 						<li>
 							<a href="javascript:" 
                                 data-bs-placement="top" 
@@ -118,12 +155,12 @@
 							</a>
 						</li>
                         <li>
-							<a href="https://www.linkedin.com/in/sadman-omee" target="_blank">
+							<a href="https://scholar.google.com/citations?user=m-oDmqAAAAAJ&hl=en&oi=ao" target="_blank">
 								<i class="ai ai-google-scholar"></i>
 							</a>
 						</li>
                         <li>
-							<a href="https://www.linkedin.com/in/sadman-omee" target="_blank">
+							<a href="https://www.researchgate.net/profile/Sadman-Sadeed-Omee" target="_blank">
 								<i class="fab fa-researchgate"></i>
 							</a>
 						</li>
@@ -138,7 +175,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="javascript:" target="_blank">
+							<a href="https://www.facebook.com/sadman.omee.7/" target="_blank">
 								<i class="fab fa-facebook"></i>
 							</a>
 						</li>
@@ -148,7 +185,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="javascript:" target="_blank">
+							<a href="https://www.instagram.com/sadmanomee/" target="_blank">
 								<i class="fab fa-instagram"></i>
 							</a>
 						</li>
@@ -206,11 +243,12 @@
 
     <section id="experience" class="p-5">
         <div class="container">
-            <div class="custom-section-header">
+            <div class="custom-section-header pt-5">
                 Experience
             </div>
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-2">
+                    <!-- empty space for timeline stuffs -->
                 </div>
                 <div class="col-lg-10 p-5">
                     <div class="experience-timeline">
@@ -228,8 +266,8 @@
                                                 <br>University of South Carolina
                                             </h5>
                                             <h6>Columbia, South Carolina, United States</h6>
-                                            <h6>August 16, 2021 - Current</h6>
-                                            <div style="text-align: justify;">
+                                            <h6>January 1, 2022 - Current</h6>
+                                            <div class="text-justify">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
                                                 neque ullam nulla dolorum repellat at. Doloremque, minus officiis. Lorem ipsum 
                                                 dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
@@ -252,8 +290,8 @@
                                                 <br>University of South Carolina
                                             </h5>
                                             <h6>Columbia, South Carolina, United States</h6>
-                                            <h6>August 16, 2021 - Current</h6>
-                                            <div style="text-align: justify;">
+                                            <h6>August 16, 2021 - December 15, 2021</h6>
+                                            <div class="text-justify">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
                                                 neque ullam nulla dolorum repellat at. Doloremque, minus officiis. Lorem ipsum 
                                                 dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
@@ -273,11 +311,11 @@
                                             <h4>Research Student</h4>
                                             <h5>Graph Drawing and Information Visualization Laboratory
                                                 <br>Department of Computer Science and Engineering
-                                                <br>University of South Carolina
+                                                <br>Bangladesh University of Engineering and Technology
                                             </h5>
-                                            <h6>Columbia, South Carolina, United States</h6>
+                                            <h6>Dhaka, Bangladesh</h6>
                                             <h6>August 16, 2021 - Current</h6>
-                                            <div style="text-align: justify;">
+                                            <div class="text-justify">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
                                                 neque ullam nulla dolorum repellat at. Doloremque, minus officiis. Lorem ipsum 
                                                 dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
@@ -298,7 +336,7 @@
                                             <h5>Dohatec New Media</h5>
                                             <h6>Dhaka, Bangladesh</h6>
                                             <h6>August 16, 2021 - Current</h6>
-                                            <div style="text-align: justify;">
+                                            <div class="text-justify">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
                                                 neque ullam nulla dolorum repellat at. Doloremque, minus officiis. Lorem ipsum 
                                                 dolor sit amet, consectetur adipisicing elit. Nam totam ducimus, 
@@ -341,10 +379,13 @@
 
     <section id="publications" class="p-5">
         <div class="container">
-            <div class="custom-section-header" style="text-align: center;">
+            <div class="custom-section-header pt-5 text-center">
+                <!--
+                    text-center : text-align center
+                -->
                 Publications
             </div>
-            <div class="custom-section-sub-header" style="text-align: center;">
+            <div class="custom-section-sub-header text-center">
                 Journal Papers
             </div>
             <div class="row align-items-center justify-content-between">
@@ -364,19 +405,40 @@
                                     Qinyang Li, 
                                     Jianjun Hu
                                 </h5>
-                                <h6>Journal of Chemical Information and Modeling</h6>
-                                <h6>2021</h6>
+                                <h6>Patterns</h6>
+                                <h6>2022</h6>
                                 <div class="publication-card-tags" style="width: 250px;">
-                                    <a href="#" target="_blank" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                    <a href="#" target="_blank" type="button" class="btn btn-dark">Code</a>
-                                    <a href="#" target="_blank" type="button" class="btn btn-dark">Others</a>
+                                    <a href="https://arxiv.org/pdf/2109.12283.pdf" target="_blank" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                    <a href="https://github.com/usccolumbia/deeperGATGNN" target="_blank" type="button" class="btn btn-dark">Code</a>
+                                    <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Others</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-5">
+                            <div>
+                                <h3>MaterialsAtlas.org: A Materials Informatics Web App Platform for Materials Discovery and Survey of State-of-the-Art</h3>
+                                <h5>
+                                    Jianjun Hu, 
+                                    Stanislav Stefanov, 
+                                    Yuqi Song, 
+                                    Sadman Sadeed Omee, 
+                                    Steph-Yves Louis, 
+                                    Edirisuriya M. D. Siriwardane, 
+                                    Yong Zhao
+                                </h5>
+                                <h6><b>npj Computational Materials</b></h6>
+                                <h6>2022</h6>
+                                <div class="publication-card-tags" style="width: 250px;">
+                                    <a href="https://arxiv.org/pdf/2109.04007.pdf" target="_blank" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                    <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Code</a>
+                                    <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Others</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="custom-section-sub-header" style="text-align: center;">
+                <div class="custom-section-sub-header text-center">
                     Submitted Papers
                 </div>
                 <div class="row align-items-center justify-content-between">
@@ -386,22 +448,43 @@
                         <ul>
                             <li class="p-5">
                                 <div>
-                                    <h3>MaterialsAtlas.org: A Materials Informatics Web App Platform for Materials Discovery and Survey of State-of-the-Art</h3>
-                                    <h5>Jianjun Hu, 
-                                        Stanislav Stefanov, 
-                                        Yuqi Song, 
-                                        Sadman Sadeed Omee, 
+                                    <h3>Accurate Prediction of Voltage of Battery Electrode Materials Using Attention Based Graph Neural Networks</h3>
+                                    <h5>
                                         Steph-Yves Louis, 
-                                        Edirisuriya M. D. Siriwardane, 
-                                        Yong Zhao
+                                        Edirisuriya M. D. Siriwardane,
+                                        Rajendra P. Joshi,
+                                        Sadman Sadeed Omee,
+                                        Neeraj Kumar,
+                                        Jianjun Hu
                                     </h5>
-                                    <h6>Nature Partner Journals Computational Materials</h6>
                                     <h6>2021</h6>
-                                    <h6>Status: Passed first phase</h6>
                                     <div class="publication-card-tags" style="width: 250px;">
-                                        <a href="#" target="_blank" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="#" target="_blank" type="button" class="btn btn-dark">Code</a>
-                                        <a href="#" target="_blank" type="button" class="btn btn-dark">Others</a>
+                                        <a href="https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/61d09b689efae767912e5ac2/original/accurate-prediction-of-voltage-of-battery-electrode-materials-using-attention-based-graph-neural-networks.pdf" target="_blank" type="button" class="btn btn-dark">
+                                            PDF (arxiv)
+                                        </a>
+                                        <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Code</a>
+                                        <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Others</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="p-5">
+                                <div>
+                                    <h3>TCSP: A Template Based Crystal Structure Prediction Algorithm and Web Server for Materials Discovery</h3>
+                                    <h5>
+                                        Lai Wei, 
+                                        Nihang Fu, 
+                                        Edirisuriya M. D. Siriwardane, 
+                                        Wenhui Yang, 
+                                        Sadman Sadeed Omee, 
+                                        Rongzhi Dong, 
+                                        Rui Xin, 
+                                        Jianjun Hu
+                                    </h5>
+                                    <h6>2021</h6>
+                                    <div class="publication-card-tags" style="width: 250px;">
+                                        <a href="https://arxiv.org/pdf/2111.14049.pdf" target="_blank" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Code</a>
+                                        <a href="javascript://" target="_blank" type="button" class="btn btn-dark">Others</a>
                                     </div>
                                 </div>
                             </li>
@@ -411,6 +494,15 @@
             </div>
         </div>
     </section>
+
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="continer">
+            <p class="lead">Copyright &copy; 2022 | Sadman Sadeed Omee</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="fas fa-arrow-circle-up h1 custom-footer"></i>
+            </a>
+        </div>
+    </footer>
 
 
 
