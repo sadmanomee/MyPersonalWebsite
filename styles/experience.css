@@ -1,4 +1,4 @@
-.experience-timeline ul li{
+.experience-timeline {
     list-style: none;
     border: 1px solid rgba(0,0,0,.125);
     background-color: #FFFFFF;
@@ -6,8 +6,13 @@
     box-shadow: 10px 10px 5px #aaaaaa;
 }
 
-.experience-timeline ul li:last-child{
-    margin-bottom: 0px;
+.badge-experinece {
+    padding-right: 0.6em;
+    padding-left: 1.2em;
+    border-radius: 10rem;
+    border: 2px solid transparent;
+    border-color: #323a45;
+    color: #323a45
 }
 
 .experience-text h4, .experience-text h5, .experience-text h6{
