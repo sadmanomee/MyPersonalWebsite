@@ -1,0 +1,20 @@
+.contact-links li{
+    list-style: none;
+}
+
+.contact-icon, .contact-text{
+    text-decoration:none;
+}
+
+.contact-icon{
+    color: #000; 
+    font-size: 32pt;
+}
+
+.contact-icon:hover{
+    transform: translate(0, -10px);
+}
+
+.contact-text{
+    font-size: 18pt;
+}
