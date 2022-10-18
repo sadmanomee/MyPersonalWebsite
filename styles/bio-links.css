@@ -1,20 +1,20 @@
-.custom-social-media-links{
+.custom-bio-links{
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    width:380px;
+    width:330px;
 }
 
-.custom-social-media-links li{
+.custom-bio-links li{
     list-style: none;
 }
 
-.custom-social-media-links li a{
+.custom-bio-links li a{
     display: inline-block;
     color: #000; 
     font-size: 22pt;
 }
 
-.custom-social-media-links a:hover{
+.custom-bio-links a:hover{
     transform: translate(0, -10px);
 }
