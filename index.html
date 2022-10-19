@@ -10,19 +10,22 @@
 	<!-- bootstrap cdn css-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- fonts -->
+    <!-- common for google fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- open sans font (google font) -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 
+    <!-- josefin sans font (google font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
     <!-- ultra font (google font) -->
     <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
 	
     <!-- icons -->
-    <!-- font-awesome icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- font-awesome icons (not needed now as cdn provided in js) -->
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
     <!-- academic icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
@@ -38,7 +41,7 @@
     <link rel="stylesheet" href="styles/footer.css">
 
     <style>
-        
+        /* spaces left if styles needed to be applied */
     </style>
 </head>
 <body>
@@ -150,12 +153,12 @@
                     Biography
                 </div>
                 <div class="col-md-7 p-5">
-                    <h2 class="custom-starter-text">
+                    <h3 class="custom-starter-text">
                         <!--
                             custom-starter-text : extra styles written in section.css
                         -->
                         Hi, I am Sadman Sadeed Omee.
-                    </h2>
+                    </h3>
                     <p class="custom-paragraph-text">
                         <!--
                             custom-paragraph-text : extra styles written in section.css
@@ -177,7 +180,7 @@
                                 title="Emails"
                                 data-bs-content="omee.sadman@gmail.com (personal) somee@email.sc.edu (instituitional)"
                             >
-                                <i class="fas fa-envelope"></i>
+                                <i class="fa-solid fa-envelope"></i>
 							</a>
 						</li>
                         <li>
@@ -187,27 +190,27 @@
 						</li>
 						<li>
 							<a href="https://www.linkedin.com/in/sadman-omee" target="_blank">
-								<i class="fab fa-linkedin"></i>
+								<i class="fa-brands fa-linkedin"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://github.com/sadmanomee" target="_blank">
-								<i class="fab fa-github"></i>
+								<i class="fa-brands fa-github"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://www.facebook.com/sadman.omee.7/" target="_blank">
-								<i class="fab fa-facebook"></i>
+								<i class="fa-brands fa-facebook"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://twitter.com/sadmanomee" target="_blank">
-								<i class="fab fa-twitter"></i>
+								<i class="fa-brands fa-twitter"></i>
 							</a>
 						</li>
 						<li>
 							<a href="https://www.instagram.com/sadmanomee/" target="_blank">
-								<i class="fab fa-instagram"></i>
+								<i class="fa-brands fa-instagram"></i>
 							</a>
 						</li>
 					</ul>
@@ -543,9 +546,9 @@
                     Research
                 </div>
                 <div class="col-md-7 p-5">
-                    <h2 class="custom-starter-text">
+                    <h3 class="custom-starter-text">
                         Hi, I am Sadman Sadeed Omee.
-                    </h2>
+                    </h3>
                     <p class="custom-paragraph-text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptatibus incidunt error sapiente molestiae! 
                         Officiis sed nobis, natus, dolores laboriosam, voluptatum vel quas quo porro commodi alias officia tempora. 
@@ -725,7 +728,7 @@
                 </div>
 
                 <div class="custom-section-sub-header text-center">
-                    Submitted Papers
+                    Submitted Manuscripts
                 </div>
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-0">
@@ -846,16 +849,16 @@
                 <div class="col-md-6">
                     <!-- Personal email link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="javascript:">
                                 <!--
                                     contact-link : extra anchor tag styles written in contact.css
                                 -->
-                                <i class="fas fa-envelope contact-icon"></i>
+                                <i class="fa-solid fa-envelope contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
-                            <div class="float-start">Personal: &nbsp;</div>
+                        <div class="col-10 text-start contact-text pt-1">
+                            <div class="float-start">Personal:&nbsp;</div>
                             <!-- 
                                 float-start : float: left; 
                             -->
@@ -867,13 +870,13 @@
 
                     <!-- Instituitional email link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="javascript:">
-                                <i class="fas fa-envelope contact-icon"></i>
+                                <i class="fa-solid fa-envelope contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
-                            <div class="float-start">Instituitional: &nbsp;</div>
+                        <div class="col-10 text-start contact-text pt-1">
+                            <div class="float-start">Instituitional:&nbsp;</div>
                             <a class="contact-link" href="javascript:">
                                 <!-- <div id="personalEmail" class="float-start" onclick="copyToClipboard()">somee@email.sc.edu</div> -->
                                 <div class="float-start">somee@email.sc.edu</div>
@@ -883,12 +886,12 @@
 
                     <!-- Location link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="javascript:">
-                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <i class="fa-solid fa-location-dot contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="javascript:">
                                 550 Assembly St, Columbia, SC, United States 29201
                             </a>
@@ -897,12 +900,12 @@
 
                     <!-- Phone link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="javascript:">
-                                <i class="fas fa-phone contact-icon"></i>
+                                <i class="fa-solid fa-phone contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="javascript:">
                                 +1 803 2433777
                             </a>
@@ -911,16 +914,15 @@
 
                     <!-- LinkedIn link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://www.linkedin.com/in/sadman-omee" target="_blank">
-                                <i class="fab fa-linkedin contact-icon"></i>
+                                <i class="fa-brands fa-linkedin contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://www.linkedin.com/in/sadman-omee" target="_blank">
                                 <div style="float: left;">Connect me on Linked</div>
-                                <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #0072b1;">i</span></div>
-                                <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #0072b1;">n</span></div>
+                                <div class="fw-bolder float-start" style="color:white;"><span style="padding: 2px; background-color: #0072b1;">in</span></div>
                                 <!-- 
                                     fw-bolder : font bolder 
                                 -->
@@ -930,14 +932,33 @@
 
                     <!-- GitHub link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://github.com/sadmanomee" target="_blank">
-                                <i class="fab fa-github contact-icon"></i>
+                                <i class="fa-brands fa-github contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://github.com/sadmanomee" target="_blank">
-                                Check my codes at GitHub
+                                <div class="float-start">Check my codes on&nbsp;</div>
+                                <div class="fw-bolder float-start">GitHub</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ORCiD link -->
+                    <div class="row py-2">
+                        <div class="col-2 text-end">
+                            <a class="contact-link" href="https://orcid.org/0000-0002-1016-8072" target="_blank">
+                                <i class="fa-brands fa-orcid contact-icon"></i>
+                            </a>
+                        </div>
+                        <div class="col-10 text-start contact-text pt-1">
+                            <a class="contact-link" href="https://orcid.org/0000-0002-1016-8072" target="_blank">
+                                <div class="float-start">Follow my research on ORC</div>
+                                <div class="fw-bolder float-start" style="color:white;"><span class="rounded-circle p-1" style="background-color: #A6CE39;">iD</span></div>
+                                <!-- 
+                                    rounded-circle : corners fully rounded 
+                                -->
                             </a>
                         </div>
                     </div>
@@ -945,36 +966,55 @@
                 <div class="col-md-6">
                     <!-- Google scholar link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://scholar.google.com/citations?user=m-oDmqAAAAAJ&hl=en&oi=ao" target="_blank">
                                 <i class="ai ai-google-scholar contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://scholar.google.com/citations?user=m-oDmqAAAAAJ&hl=en&oi=ao" target="_blank">
-                                <div class="float-start">Follow my research on &nbsp;</div>
+                                <div class="float-start">Follow my research on&nbsp;</div>
                                 <div class="fw-bolder float-start" style="color:#4285F4;">G</div>
                                 <div class="fw-bolder float-start" style="color:#DB4437;">o</div>
                                 <div class="fw-bolder float-start" style="color:#F4B400;">o</div>
                                 <div class="fw-bolder float-start" style="color:#4285F4;">g</div>
                                 <div class="fw-bolder float-start" style="color:#0F9D58;">l</div>
                                 <div class="fw-bolder float-start" style="color:#DB4437;">e</div>
-                                <div class="fw-bolder float-start" style="color:#808080;">&nbsp; Scholar</div>
+                                <div class="fw-bolder float-start" style="color:#808080;">&nbsp;Scholar</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Publons link -->
+                    <div class="row py-2">
+                        <div class="col-2 text-end">
+                            <a class="contact-link" href="https://www.webofscience.com/wos/author/record/GXG-9679-2022" target="_blank">
+                                <i class="ai ai-publons-square contact-icon"></i>
+                            </a>
+                        </div>
+                        <div class="col-10 text-start contact-text pt-1">
+                            <a class="contact-link" href="https://www.webofscience.com/wos/author/record/GXG-9679-2022" target="_blank">
+                                <div class="float-start">Follow my research on &nbsp;</div>
+                                <div class="fw-bolder float-start" style="color:white;"><span class="px-1 pb-1" style="background-color: #2a52be;">p</span></div>
+                                ublons
+                                <!-- 
+                                    rounded-circle : corners fully rounded 
+                                -->
                             </a>
                         </div>
                     </div>
 
                     <!-- ResearchGate link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://www.researchgate.net/profile/Sadman-Sadeed-Omee" target="_blank">
-                                <i class="fab fa-researchgate contact-icon"></i>
+                                <i class="fa-brands fa-researchgate contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://www.researchgate.net/profile/Sadman-Sadeed-Omee" target="_blank">
                                 <div class="float-start">Follow my research on &nbsp;</div>
-                                <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #00CED1">R</span></div>
+                                <div class="fw-bolder float-start" style="color:white;"><span class="p-1" style="background-color: #00CED1">R<sup>G</sup></span></div>
                                 esearchGate
                             </a>
                         </div>
@@ -982,12 +1022,12 @@
                     
                     <!-- Facebook link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://www.facebook.com/sadman.omee.7/" target="_blank">
-                                <i class="fab fa-facebook contact-icon"></i>
+                                <i class="fa-brands fa-facebook contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://www.facebook.com/sadman.omee.7/" target="_blank">
                                 <div class="float-start">Add me on &nbsp;</div>
                                 <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #3b5998">Facebook</span></div>
@@ -997,12 +1037,12 @@
 
                     <!-- Twitter link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://twitter.com/sadmanomee" target="_blank">
-                                <i class="fab fa-twitter contact-icon"></i>
+                                <i class="fa-brands fa-twitter contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://twitter.com/sadmanomee" target="_blank">
                                 <div class="float-start">Follow me on &nbsp;</div>
                                 <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #00acee">Twitter</span></div>
@@ -1012,12 +1052,12 @@
 
                     <!-- Instagram link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://www.instagram.com/sadmanomee/" target="_blank">
-                                <i class="fab fa-instagram contact-icon"></i>
+                                <i class="fa-brands fa-instagram contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://www.instagram.com/sadmanomee/" target="_blank">
                                 <div class="float-start">Follow me on &nbsp;</div>
                                 <div class="fw-bolder float-start" style="color:white;"><span style="background-image: linear-gradient(#8a3ab9, #bc2a8d, #fbad50);">Instagram</span></div>
@@ -1027,12 +1067,12 @@
 
                     <!-- Reddit link -->
                     <div class="row py-2">
-                        <div class="col-sm-2 text-end">
+                        <div class="col-2 text-end">
                             <a class="contact-link" href="https://www.reddit.com/user/sadmanomee" target="_blank">
-                                <i class="fab fa-reddit contact-icon"></i>
+                                <i class="fa-brands fa-reddit contact-icon"></i>
                             </a>
                         </div>
-                        <div class="col-sm-10 text-start contact-text pt-1">
+                        <div class="col-10 text-start contact-text pt-1">
                             <a class="contact-link" href="https://www.reddit.com/user/sadmanomee" target="_blank">
                                 <div class="float-start">Follow me on &nbsp;</div>
                                 <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #ff4500">Reddit</span></div>
@@ -1101,6 +1141,9 @@
             return new bootstrap.Popover(popoverTriggerEl)
         })
     </script>
+
+    <!-- fontawsome cdn js -->
+    <script src="https://kit.fontawesome.com/2969c94fc8.js" crossorigin="anonymous"></script>
 
     <!-- js for copying to clipboard by clicking -->
     <!-- <script>

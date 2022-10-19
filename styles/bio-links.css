@@ -2,7 +2,8 @@
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    width:330px;
+    width:300px;
+    padding: 0px;
 }
 
 .custom-bio-links li{

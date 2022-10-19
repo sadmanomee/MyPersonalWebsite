@@ -8,8 +8,11 @@
     font-size: 26pt;
 }
 .custom-starter-text{
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
+    /* font-family: 'Open Sans Condensed', sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -2px;
+    /* font-size: 22pt; */
 }
 .custom-paragraph-text{
     text-align: justify;

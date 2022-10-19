@@ -31,3 +31,9 @@
 .contact-text{
     font-size: 12pt;
 }
+
+/* @media only screen and (max-width: 576px) {
+    .contact-icon{
+        font-size: 10pt;
+    }
+} */
