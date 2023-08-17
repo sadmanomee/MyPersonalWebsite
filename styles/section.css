@@ -9,10 +9,11 @@
 }
 .custom-starter-text{
     /* font-family: 'Open Sans Condensed', sans-serif; */
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 500;
-    letter-spacing: -2px;
-    /* font-size: 22pt; */
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Lilita One', cursive;
+    /* font-weight: 400; */
+    /* letter-spacing: -2px; */
+    font-size: 22pt;
 }
 .custom-paragraph-text{
     text-align: justify;
