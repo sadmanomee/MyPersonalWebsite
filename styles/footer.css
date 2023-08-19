@@ -5,6 +5,7 @@
 .custom-footer:hover{
     animation: grow 1s ease-in-out infinite;
 }
+
 @keyframes grow
 {
     20%{

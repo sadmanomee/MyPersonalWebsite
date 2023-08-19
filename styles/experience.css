@@ -14,8 +14,7 @@
     border-color: #323a45;
 }
 
-.experience-text h4, .experience-text h5, .experience-text h6{
+.experience-text h4, .experience-text h5, .experience-text h6, .experience-text ul li{
     font-family: 'Open Sans Condensed',sans-serif;
-    font-weight: 700;
+    font-weight: 600;
 }
-
