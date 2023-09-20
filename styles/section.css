@@ -20,6 +20,11 @@
     text-justify: inter-word;
 }
 
+.section-details-text{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 14pt;
+}
+
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
