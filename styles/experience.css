@@ -1,20 +1,23 @@
 .experience-timeline {
-    list-style: none;
-    border: 1px solid rgba(0,0,0,.125);
-    background-color: #FFFFFF;
-    margin-bottom: 20px;
-    box-shadow: 10px 10px 5px #aaaaaa;
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .badge-experinece {
-    padding-right: 0.6em;
-    padding-left: 1.2em;
-    border-radius: 10rem;
-    border: 2px solid transparent;
-    border-color: #323a45;
+  padding-right: 0.6em;
+  padding-left: 1.2em;
+  border-radius: 10rem;
+  border: 2px solid transparent;
+  border-color: #323a45;
 }
 
-.experience-text h4, .experience-text h5, .experience-text h6, .experience-text ul li{
-    font-family: 'Open Sans Condensed',sans-serif;
-    font-weight: 600;
+.experience-text h4,
+.experience-text h5,
+.experience-text h6,
+.experience-text ul li {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
 }

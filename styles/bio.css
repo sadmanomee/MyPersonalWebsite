@@ -3,24 +3,24 @@
     font-size: 14pt;
 } */
 
-.custom-bio-links{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width:300px;
-    padding: 0px;
+.custom-bio-links {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 300px;
+  padding: 0px;
 }
 
-.custom-bio-links li{
-    list-style: none;
+.custom-bio-links li {
+  list-style: none;
 }
 
-.custom-bio-links li a{
-    display: inline-block;
-    color: #000; 
-    font-size: 22pt;
+.custom-bio-links li a {
+  display: inline-block;
+  color: #000;
+  font-size: 22pt;
 }
 
-.custom-bio-links a:hover{
-    transform: translate(0, -10px);
+.custom-bio-links a:hover {
+  transform: translate(0, -10px);
 }

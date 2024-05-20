@@ -1,14 +1,13 @@
-.custom-footer{
-    border-radius:50%;
+.custom-footer {
+  border-radius: 50%;
 }
 
-.custom-footer:hover{
-    animation: grow 1s ease-in-out infinite;
+.custom-footer:hover {
+  animation: grow 1s ease-in-out infinite;
 }
 
-@keyframes grow
-{
-    20%{
-        transform:scale(1.5);
-    }
+@keyframes grow {
+  20% {
+    transform: scale(1.5);
+  }
 }
