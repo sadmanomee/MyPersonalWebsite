@@ -118,9 +118,9 @@
 
 
     <!-- cover photo start -->
-    <section>
+    <!-- <section>
             <img class="img-fluid" src="./assets/images/me.jpg" alt="Me in Blue Ridge Parway, North Carolina, United States">
-    </section>
+    </section> -->
     <!-- cover photo end -->
 
 
@@ -151,14 +151,19 @@
                     align-items-center      : aligns items in center
                     justify-content-between : for column content justification
                 -->
-                <div class="col-md-5 custom-section-header">
+                <div class="col-md-4 custom-section-header">
                     <!--
                         col-md-5              : space taken by that column (5 out of 12 spaces) allotted for each row
                         custom-section-header : extra styles written in section.css
                     -->
-                    Biography
+                    <!-- Biography -->
+                    <img
+                        src="assets/images/me.jpg"
+                        alt="Sadman Sadeed Omee"
+                        class="me-round-img img-fluid"
+                    >
                 </div>
-                <div class="col-md-7 p-5">
+                <div class="col-md-8 p-5 p-md-4 p-sm-3 p-2">
                     <h3 class="custom-starter-text typewrite-effect">
                         <!--
                             custom-starter-text : extra styles written in section.css
@@ -177,8 +182,9 @@
                         
                         
                         I am born and raised in <a href="https://goo.gl/maps/qD9WutJxYvWKutJw8" style="text-decoration: none;">Bangladesh</a>. I have completed my B.S. in Computer Science and Engineering from Bangladesh University of Engineering and Technology in 2019. My aim is to become an effective and impactful Deep Learning Scientist.
+                        <br><br>
+                        (This website is not optimized for cellphones yet. Please view it in a desktop browser)
                     </p>
-                    <p>(This website is not optimized for cellphones yet. Please view it in a desktop browser)</p>
 					<ul class="custom-bio-links">
                         <!--
                             custom-bio-links : extra styles written in bio.css
@@ -224,6 +230,18 @@
 							</a>
 						</li>
 					</ul>
+
+                    <!-- News / Updates -->
+                    <div id="news-updates" class="mt-4">
+                        <h5 class="fw-bold mb-3">News / Updates</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>[September 29, 2025]</strong> Passed Ph.D. Comprehensive Exam.</li>
+                            <li><strong>[September 26, 2025]</strong> Our polymorphism crystal structure prediction paper publihsed in <em>Advanced Science</em>.</li>
+                            <li><strong>[August 8, 2025]</strong> Completed Summer Internship at KLA.</li>
+                            <li><strong>[May 12, 2025]</strong> Started Internship at KLA.</li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -261,7 +279,7 @@
     <!-- Education start -->
     <section id="education" class="p-5" style="background-color: #F3F3F3;">
         <div class="container">
-            <div class="row align-items-center justify-content-between">
+            <div class="row align-items-center justify-content-between education-card">
                 <div class="col-lg-4 custom-section-header">
                     Education
                 </div>
@@ -284,7 +302,7 @@
                           <div class="education-timeline p-4">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-4">
-                                    <img class="img-fluid" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                    <img class="img-fluid edu-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
                                 </div>
                                 <div class="col-md-8 education-text">
                                     <!-- 
@@ -302,12 +320,12 @@
 
                     <div class="row">
                         <div class="col-auto text-center flex-column d-none d-sm-flex">
-                          <div class="row h-50">
-                            <div class="col">&nbsp;</div>
-                            <div class="col">&nbsp;</div>
-                          </div>
+                            <div class="row h-50">
+                                <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                            </div>
                           <h5 class="m-2">
-                            <span class="badge badge-education bg-secondary">&nbsp;</span>
+                            <span class="badge badge-experinece">&nbsp;</span>
                           </h5>
                           <div class="row h-50">
                             <div class="col border-end border-2 border-secondary">&nbsp;</div>
@@ -318,7 +336,7 @@
                           <div class="education-timeline p-4">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-4">
-                                    <img class="img-fluid" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                    <img class="img-fluid edu-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
                                 </div>
                                 <div class="col-md-8 education-text">
                                     <!-- 
@@ -352,7 +370,7 @@
                           <div class="education-timeline p-4">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-md-4">
-                                    <img class="img-fluid" src="./assets/images/logos/BUET_logo.png" alt="BUET logo">
+                                    <img class="img-fluid edu-img" src="./assets/images/logos/BUET_logo.png" alt="BUET logo">
                                 </div>
                                 <div class="col-md-8 education-text">
                                     <h4>Bangladesh University of Engineering and Technology</h4>
@@ -405,7 +423,7 @@
             <div class="custom-section-header pt-5">
                 Experience
             </div>
-            <div class="row align-items-center justify-content-between">
+            <div class="row align-items-center justify-content-between experience-card">
                 <div class="col-lg-2">
                     <!-- empty space -->
                 </div>
@@ -427,21 +445,22 @@
                         <div class="col py-2">
                             <div class="experience-timeline p-5">
                                 <div class="row align-items-center justify-content-between">
-                                    <div class="col-md-3">
-                                        <img class="img-fluid" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid exp-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
                                     </div>
-                                    <div class="col-md-9 experience-text">
+                                    <div class="col-md-8 experience-text">
                                         <h4>Graduate Research Assistant</h4>
                                         <h5>Machine Learning and Evoluation Laboratory
                                             <br>Department of Computer Science and Engineering
                                             <br>University of South Carolina
                                         </h5>
                                         <h6>Columbia, South Carolina, United States</h6>
-                                        <h6>January 2022 - August 2023</h6>
+                                        <h6>January 2022 - Present</h6>
                                         <div class="text-justify">
                                             <ul>
-                                                <li>Conducting research on deep learning techniques like graph neural networks (GNNs), transformers, and diffusion models to solve materials informatics problems, such as crystal structure prediction, materials property prediction, and generative models for materials.</li>
-                                                <li>Currently developing a diffusion model-based crystal structure prediction (CSP) model for conditional generation of both crystal lattice parameters and 3D atom coordinates from chemical compositions.</li>
+                                                <li>Received stipend support through a research assistantship from January 2022 to July 2023; continuing research while receiving teaching assistant stipend support in Fall and Spring semesters and internship salary support in Summer semesters from August 2023 onward.</li>
+                                                <li>Conducting research on artificial intelligence techniques such as graph neural networks, transformers, and diffusion models to solve materials informatics problems, such as crystal structure prediction (CSP), materials property prediction, generative and physics- informed models for materials.</li>
+                                                <li>Currently developing a generative diffusion model for conditional generation of 3D crystal polyhedra (building blocks of crystals) from chemical compositions. Successful prediction of the polyhedra of a crystal can lead to accurate prediction of the full crystal structure and provide an efficient solution to the CSP problem.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -449,6 +468,47 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-auto text-center flex-column d-none d-sm-flex">
+                            <div class="row h-50">
+                                <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                            </div>
+                          <h5 class="m-2">
+                            <span class="badge badge-experinece bg-secondary">&nbsp;</span>
+                          </h5>
+                          <div class="row h-50">
+                            <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                          </div>
+                        </div>
+                        <div class="col py-2">
+                            <div class="experience-timeline p-5">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid exp-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                    </div>
+                                    <div class="col-md-8 experience-text">
+                                        <h4>Graduate Teaching Assistant</h4>
+                                        <h5>Course: General Applications Programming (CSCE 102)
+                                            <br>Department of Computer Science and Engineering
+                                            <br>University of South Carolina
+                                        </h5>
+                                        <h6>Columbia, South Carolina, United States</h6>
+                                        <!-- <h6>August 2021 - December 2021, August 2023 - Current</h6> -->
+                                        <h6>August 2023 - Present</h6>
+                                        <div class="text-justify">
+                                            <ul>
+                                                <li>Teaching HTML, CSS, and JavaScript to three lecture and one lab group of approximately 75 students and 25 students, respectively.</li>
+                                                <li>Responsibilities include delivering lectures, preparing examinations and assignments, grading examinations and assignments, tracking students' performances, and publishing results.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div class="col-auto text-center flex-column d-none d-sm-flex">
                             <div class="row h-50">
@@ -466,21 +526,18 @@
                         <div class="col py-2">
                             <div class="experience-timeline p-5">
                                 <div class="row align-items-center justify-content-between">
-                                    <div class="col-md-3">
-                                        <img class="img-fluid" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid exp-img" src="./assets/images/logos/KLA_logo.jpg" alt="UofSC logo">
                                     </div>
-                                    <div class="col-md-9 experience-text">
-                                        <h4>Graduate Teaching Assistant</h4>
-                                        <h5>Course: General Applications Programming (CSCE 102)
-                                            <br>Department of Computer Science and Engineering
-                                            <br>University of South Carolina
-                                        </h5>
-                                        <h6>Columbia, South Carolina, United States</h6>
-                                        <!-- <h6>August 2021 - December 2021, August 2023 - Current</h6> -->
-                                        <h6>August 2023 - Present</h6>
+                                    <div class="col-md-8 experience-text">
+                                        <h4>Summer Intern</h4>
+                                        <h5>KLA</h5>
+                                        <h6>Ann Arbor, Michigan, United States</h6>
+                                        <h6>May 2025 - August 2025</h6>
                                         <div class="text-justify">
                                             <ul>
-                                                <li>Teaching HTML, CSS, and JavaScript to three lecture groups of total of 75 students, and a lab group of total 25 students.</li>
+                                                <li> Developed an unsupervised continual transfer learning framework to predict critical dimensions of semiconductor wafers from out-of-distribution spectral data.</li>
+                                                <li>Contributed to AI-driven metrology methods to enhance accuracy and efficiency in semiconductor manufacturing.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -488,6 +545,45 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="row">
+                        <div class="col-auto text-center flex-column d-none d-sm-flex">
+                            <div class="row h-50">
+                                <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                                <div class="col">&nbsp;</div>
+                            </div>
+                          <h5 class="m-2">
+                            <span class="badge badge-experinece">&nbsp;</span>
+                          </h5>
+                          <div class="row h-50">
+                            <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                          </div>
+                        </div>
+                        <div class="col py-2">
+                            <div class="experience-timeline p-5">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid exp-img" src="./assets/images/logos/LLNL_logo.png" alt="UofSC logo">
+                                    </div>
+                                    <div class="col-md-8 experience-text">
+                                        <h4>Summer Intern</h4>
+                                        <h5>Lawrence Livermore National Laboratory</h5>
+                                        <h6>Livermore, California, United States</h6>
+                                        <h6>May 2024 - August 2024</h6>
+                                        <div class="text-justify">
+                                            <ul>
+                                                <li>Engaged in hands-on research with LLNL scientists to develop advanced ML models in materials and molecular science, high- performance computing (HPC), and related computational science fields.</li>
+                                                <li>Collaborated on a project for developing a multimodal foundation model for molecules using a contrastive learning based latent space alignment approach.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="row">
                         <div class="col-auto text-center flex-column d-none d-sm-flex">
@@ -506,17 +602,20 @@
                         <div class="col py-2">
                             <div class="experience-timeline p-5">
                                 <div class="row align-items-center justify-content-between">
-                                    <div class="col-md-3">
-                                        <img class="img-fluid" src="./assets/images/logos/LLNL_logo.png" alt="UofSC logo">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid exp-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
                                     </div>
-                                    <div class="col-md-9 experience-text">
-                                        <h4>Summer Research Intern</h4>
-                                        <h5>Lawrence Livermore National Laboratory</h5>
-                                        <h6>Livermore, California, United States</h6>
-                                        <h6>May 2024 - August 2024</h6>
+                                    <div class="col-md-8 experience-text">
+                                        <h4>Graduate Teaching Assistant</h4>
+                                        <h5>Course: Introduction to Computer Concepts (CSCE 101) & General Applications Programming (CSCE 102)
+                                            <br>Department of Computer Science and Engineering
+                                            <br>University of South Carolina
+                                        </h5>
+                                        <h6>Columbia, South Carolina, United States</h6>
+                                        <h6>August 2021 - December 2021</h6>
                                         <div class="text-justify">
                                             <ul>
-                                                <li>Collaborated on a project for developing a multimodal foundation model for molecules. Specifics of the work cannot be provided due to the lab's confidentiality policies.</li>
+                                                <li>Conducted web-development lab sessions of two lab groups of approximately 50 students.</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -524,6 +623,8 @@
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>

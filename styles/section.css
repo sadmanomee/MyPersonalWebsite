@@ -43,11 +43,11 @@
   }
 }
 
-.typewrite-effect {
-  border-right: 0.1em solid black; /* The typwriter cursor */
+/* .typewrite-effect {
+  border-right: 0.1em solid black; 
   width: 13em;
-  white-space: nowrap; /* Keeps the content on a single line */
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  overflow: hidden;
   animation: typing 2s steps(20, end),
     blink-caret 0.5s step-end infinite alternate;
-}
+} */

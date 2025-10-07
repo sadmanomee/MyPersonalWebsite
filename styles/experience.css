@@ -1,3 +1,47 @@
+/* .experience-timeline {
+  list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.badge-experinece {
+  padding-right: 0.6em;
+  padding-left: 1.2em;
+  border-radius: 10rem;
+  border: 2px solid transparent;
+  border-color: #323a45;
+}
+
+.experience-text h4,
+.experience-text h5,
+.experience-text h6,
+.experience-text ul li {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
+}
+
+.experience-card img.exp-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .experience-card .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-card img.exp-img {
+    max-width: 60%;
+    margin: 0 auto 20px;
+  }
+} */
+
+/* === Base desktop styles (unchanged) === */
 .experience-timeline {
   list-style: none;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -20,4 +64,66 @@
 .experience-text ul li {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 600;
+}
+
+.experience-card img.exp-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* === Medium / Small screens (≤768px): text smaller, same image size === */
+@media (max-width: 768px) {
+  .experience-card .row {
+    flex-direction: column;
+    align-items: center; /* centers image horizontally */
+  }
+
+  .experience-card img.exp-img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 80%; /* same image size */
+  }
+
+  /* make text smaller */
+  .experience-text h4 {
+    font-size: 1.05rem;
+  }
+  .experience-text h5 {
+    font-size: 0.95rem;
+  }
+  .experience-text h6 {
+    font-size: 0.85rem;
+  }
+  .experience-text ul li {
+    font-size: 0.7rem;
+  }
+
+  /* keep text left-aligned */
+  .experience-text {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+/* === Extra-small screens (≤480px): smaller image and text === */
+@media (max-width: 480px) {
+  .experience-card img.exp-img {
+    max-width: 60%;
+    margin-bottom: 15px;
+  }
+
+  .experience-text h4 {
+    font-size: 0.95rem;
+  }
+  .experience-text h5 {
+    font-size: 0.85rem;
+  }
+  .experience-text h6 {
+    font-size: 0.8rem;
+  }
+  .experience-text ul li {
+    font-size: 0.7rem;
+  }
 }
