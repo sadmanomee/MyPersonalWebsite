@@ -28,3 +28,22 @@
   font-size: 11pt;
   margin: 5px;
 }
+
+.publication-card img.publication-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .publication-card .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .publication-card img.publication-image {
+    max-width: 80%;
+    margin: 0 auto 20px;
+  }
+}

@@ -303,6 +303,40 @@
                     <div class="row">
                         <div class="col-auto text-center flex-column d-none d-sm-flex">
                           <div class="row h-50">
+                            <div class="col">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                          </div>
+                          <h5 class="m-2">
+                            <span class="badge badge-education bg-secondary">&nbsp;</span>
+                          </h5>
+                          <div class="row h-50">
+                            <div class="col border-end border-2 border-secondary">&nbsp;</div>
+                            <div class="col">&nbsp;</div>
+                          </div>
+                        </div>
+                        <div class="col py-2">
+                          <div class="education-timeline p-4">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-md-4">
+                                    <img class="img-fluid" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
+                                </div>
+                                <div class="col-md-8 education-text">
+                                    <!-- 
+                                        education-text : custom education text styles written in education.css
+                                    -->
+                                    <h4>University of South Carolina</h4>
+                                    <h5>M.S. (en route to Ph.D.)</h5>
+                                    <h5>Computer Science</h5>
+                                    <h6>August 2021 - December 2024</h6>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-auto text-center flex-column d-none d-sm-flex">
+                          <div class="row h-50">
                             <div class="col border-end border-2 border-secondary">&nbsp;</div>
                             <div class="col">&nbsp;</div>
                           </div>
@@ -557,24 +591,53 @@
 
     <!-- Publications start -->
     <section id="publications" class="p-5">
-        <div class="container">
-            <div class="custom-section-header pt-5 text-center">
-                <!--
-                    text-center : text-align center
-                -->
-                Publications
-            </div>
-            <div class="custom-section-sub-header text-center">
-                Journal Papers
-            </div>
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-0">
-                </div>
-                <div class="col-lg-12 p-5 publication-card">
-                    <ul>
-                        <li class="p-4">
-                            <div>
-                                <img class="img-fluid" src="./assets/images/publication_images/DeeperGATGNN.png" alt="DeeperGATGNN logo">
+    <div class="container">
+        <div class="custom-section-header pt-5 text-center">
+            Publications
+        </div>
+
+        <!-- ===== Journal Papers ===== -->
+        <div class="custom-section-sub-header text-center">
+            Journal Papers
+        </div>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-12 p-5 publication-card">
+                <ul>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/ParetoCSP2.png" alt="ParetoCSP2 image">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Polymorphism Crystal Structure Prediction with Adaptive Space Group Diversity Control</h4>
+                                <h6>
+                                    <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,  
+                                    Lai Wei, 
+                                    Sourin Dey, 
+                                    Jianjun Hu
+                                </h6>
+                                <h6><i>Advanced Science</i></h6>
+                                <h6>2025</h6>
+                                <div class="row publication-card-tags">
+                                    <div class="col-xs-12">
+                                        <a href="https://doi.org/10.1002/advs.202510792" class="btn btn-dark">Paper</a>
+                                        <a href="https://advanced.onlinelibrary.wiley.com/doi/epdf/10.1002/advs.202510792" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2506.11332" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/ParetoCSP2" class="btn btn-dark">Code</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/DeeperGATGNN.png" alt="DeeperGATGNN image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Scalable Deeper Graph Neural Networks for High-Performance Materials Property Prediction</h4>
                                 <h6>
                                     <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>, 
@@ -589,22 +652,26 @@
                                 <h6><i>Patterns</i></h6>
                                 <h6>2022</h6>
                                 <div class="row publication-card-tags">
-                                    <!--
-                                        publication-card-tags : extra styles written for card tags in publications.css
-                                    -->
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1016/j.patter.2022.100491" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://www.cell.com/patterns/pdfExtended/S2666-3899(22)00076-9" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2109.12283.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/deeperGATGNN" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1016/j.patter.2022.100491" class="btn btn-dark">Paper</a>
+                                        <a href="https://www.cell.com/patterns/pdfExtended/S2666-3899(22)00076-9" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2109.12283.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/deeperGATGNN" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image w-75" src="assets/images/publication_images/OOD_Benchmark.png" alt="OOD Materials Benchmark image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Structure-Based Out-of-Distribution (OOD) Materials Property Prediction: A Benchmark Study</h4>
-                                <h6> 
+                                <h6>
                                     <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
                                     Nihang Fu, 
                                     Rongzhi Dong, 
@@ -615,16 +682,23 @@
                                 <h6>2024</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://www.nature.com/articles/s41524-024-01316-4" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://www.nature.com/articles/s41524-024-01316-4.pdf" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2401.08032.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/sadmanomee/OOD_Materials_Benchmark" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://www.nature.com/articles/s41524-024-01316-4" class="btn btn-dark">Paper</a>
+                                        <a href="https://www.nature.com/articles/s41524-024-01316-4.pdf" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2401.08032.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/sadmanomee/OOD_Materials_Benchmark" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image w-50" src="assets/images/publication_images/ParetoCSP.png" alt="ParetoCSP image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Crystal Structure Prediction Using Neural Network Potential and Age-Fitness Pareto Genetic Algorithm</h4>
                                 <h6> 
                                     <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
@@ -636,15 +710,22 @@
                                 <h6>2024</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.20517/jmi.2023.33" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://arxiv.org/pdf/2309.06710.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/sadmanomee/ParetoCSP" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.20517/jmi.2023.33" class="btn btn-dark">Paper</a>
+                                        <a href="https://arxiv.org/pdf/2309.06710.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/sadmanomee/ParetoCSP" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/MD-HiT.png" alt="MD-HIT image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>MD-HIT: Machine Learning for Materials Property Prediction with Dataset Redundancy Control</h4>
                                 <h6>
                                     Qin Li,
@@ -656,16 +737,23 @@
                                 <h6>2024</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://www.nature.com/articles/s41524-024-01426-z" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://www.nature.com/articles/s41524-024-01426-z.pdf" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2307.04351.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/MD-HIT" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://www.nature.com/articles/s41524-024-01426-z" class="btn btn-dark">Paper</a>
+                                        <a href="https://www.nature.com/articles/s41524-024-01426-z.pdf" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2307.04351.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/MD-HIT" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/MaterialsAtlas.png" alt="MaterialsAtlas image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>MaterialsAtlas.org: A Materials Informatics Web App Platform for Materials Discovery and Survey of State-of-the-Art</h4>
                                 <h6>
                                     Jianjun Hu, 
@@ -680,15 +768,22 @@
                                 <h6>2022</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1038/s41524-022-00750-6" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://www.nature.com/articles/s41524-022-00750-6.pdf" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2109.04007.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://doi.org/10.1038/s41524-022-00750-6" class="btn btn-dark">Paper</a>
+                                        <a href="https://www.nature.com/articles/s41524-022-00750-6.pdf" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2109.04007.pdf" class="btn btn-dark">PDF (arxiv)</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/MTransformers.png" alt="Material Transformers image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Material Transformers: Deep Learning Language Models for Generative Materials Design</h4>
                                 <h6>
                                     Nihang Fu, 
@@ -705,16 +800,23 @@
                                 <h6>2023</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1088/2632-2153/acadcd" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://iopscience.iop.org/article/10.1088/2632-2153/acadcd/pdf" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2206.13578.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/MTransformer" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1088/2632-2153/acadcd" class="btn btn-dark">Paper</a>
+                                        <a href="https://iopscience.iop.org/article/10.1088/2632-2153/acadcd/pdf" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2206.13578.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/MTransformer" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/GNN-Voltage.png" alt="Voltage GNN image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Accurate Prediction of Voltage of Battery Electrode Materials Using Attention Based Graph Neural Networks</h4>
                                 <h6>
                                     Steph-Yves Louis, 
@@ -728,17 +830,21 @@
                                 <h6>2022</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1021/acsami.2c00029" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/61d09b689efae767912e5ac2/original/accurate-prediction-of-voltage-of-battery-electrode-materials-using-attention-based-graph-neural-networks.pdf" type="button" class="btn btn-dark">
-                                            PDF (chemrxiv)
-                                        </a>
-                                        <a href="https://github.com/superlouis/GATGNN-VOLTAGE" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1021/acsami.2c00029" class="btn btn-dark">Paper</a>
+                                        <a href="https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/61d09b689efae767912e5ac2/original/accurate-prediction-of-voltage-of-battery-electrode-materials-using-attention-based-graph-neural-networks.pdf" class="btn btn-dark">PDF (chemrxiv)</a>
+                                        <a href="https://github.com/superlouis/GATGNN-VOLTAGE" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/DeepXRD.png" alt="DeepXRD image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>DeepXRD: A Deep Learning Model for Predicting XRD Spectrum from Materials Composition</h4>
                                 <h6>
                                     Rongzhi Dong, 
@@ -755,14 +861,20 @@
                                 <h6>2022</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1021/acsami.2c05812" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://arxiv.org/pdf/2203.14326.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://doi.org/10.1021/acsami.2c05812" class="btn btn-dark">Paper</a>
+                                        <a href="https://arxiv.org/pdf/2203.14326.pdf" class="btn btn-dark">PDF (arxiv)</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image w-75" src="assets/images/publication_images/MaterialsUncertainity.png" alt="UQ Benchmark image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Materials Property Prediction with Uncertainity Estimation: A Benchmark Study</h4>
                                 <h6>
                                     Daniel Varivoda, 
@@ -774,15 +886,21 @@
                                 <h6>2023</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="ttps://doi.org/10.1063/5.0133528" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://arxiv.org/pdf/2211.02235.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/materialsUQ" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1063/5.0133528" class="btn btn-dark">Paper</a>
+                                        <a href="https://arxiv.org/pdf/2211.02235.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/materialsUQ" class="btn btn-dark">Code</a>
                                     </div>
-                                </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/PhysicalEncoding.png" alt="Physical Encoding image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Physical Encoding Improves out-of-distribution (OOD) Performance in Deep Learning Materials Property Prediction</h4>
                                 <h6>
                                     Nihang Fu, 
@@ -793,15 +911,21 @@
                                 <h6>2024</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1016/j.commatsci.2024.113603" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://arxiv.org/pdf/2407.15214" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/funihang/PhysicalEncoding" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1016/j.commatsci.2024.113603" class="btn btn-dark">Paper</a>
+                                        <a href="https://arxiv.org/pdf/2407.15214" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/funihang/PhysicalEncoding" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/GlobalMappingMaterials.png" alt="Global Mapping image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Global Mapping of Structures and Properties of Crystal Materials</h4>
                                 <h6>
                                     Qinyang Li,
@@ -815,16 +939,22 @@
                                 <h6>2023</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1021/acs.jcim.3c00224" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.3c00224" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2302.06486.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/matglobalmapping" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1021/acs.jcim.3c00224" class="btn btn-dark">Paper</a>
+                                        <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.jcim.3c00224" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2302.06486.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/matglobalmapping" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image w-75" src="assets/images/publication_images/CSPMetrics.jpeg" alt="CSP Metrics image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>Towards Quantitative Evaluation of Crystal Structure Prediction Performance</h4>
                                 <h6>
                                     Lai Wei, 
@@ -836,15 +966,21 @@
                                 <h6>2024</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1016/j.commatsci.2024.112802" type="button" class="btn btn-dark">PDF</a>
-                                        <a href="https://arxiv.org/pdf/2307.05886.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        <a href="https://github.com/usccolumbia/CSPBenchMetrics" type="button" class="btn btn-dark">Code</a>
+                                        <a href="https://doi.org/10.1016/j.commatsci.2024.112802" class="btn btn-dark">PDF</a>
+                                        <a href="https://arxiv.org/pdf/2307.05886.pdf" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://github.com/usccolumbia/CSPBenchMetrics" class="btn btn-dark">Code</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li class="p-4">
-                            <div>
+                        </div>
+                    </li>
+
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image" src="assets/images/publication_images/TCSP.jpeg" alt="TCSP image">
+                            </div>
+                            <div class="col-md-8">
                                 <h4>TCSP: A Template-Based Crystal Structure Prediction Algorithm for Materials Discovery</h4>
                                 <h6>
                                     Lai Wei, 
@@ -860,82 +996,171 @@
                                 <h6>2022</h6>
                                 <div class="row publication-card-tags">
                                     <div class="col-xs-12">
-                                        <a href="https://doi.org/10.1021/acs.inorgchem.1c03879" type="button" class="btn btn-dark">Paper</a>
-                                        <a href="https://arxiv.org/pdf/2111.14049.pdf" type="button" class="btn btn-dark">PDF (arxiv)</a>
+                                        <a href="https://doi.org/10.1021/acs.inorgchem.1c03879" class="btn btn-dark">Paper</a>
+                                        <a href="https://arxiv.org/pdf/2111.14049.pdf" class="btn btn-dark">PDF (arxiv)</a>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                    </li>
 
-                <div class="custom-section-sub-header text-center">
-                    Book Chapters
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-0">
-                    </div>
-                    <div class="col-lg-12 p-5 publication-card">
-                        <ul>
-                            <li class="p-4">
-                                <div>
-                                    <h4>Evolutionary Machine Learning in Science and Engineering</h4>
-                                    <h6> 
-                                        Jianjun Hu, 
-                                        Yuqi Song, 
-                                        <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
-                                        Lai Wei, 
-                                        Rongzhi Dong, 
-                                        Siddharth Gianey
-                                    </h6>
-                                    <h6><i>Handbook of Evolutionary Machine Learning</i></h6>
-                                    <h6>2023</h6>
-                                    <div class="row publication-card-tags">
-                                        <div class="col-xs-12">
-                                            <a href="https://doi.org/10.1007/978-981-99-3814-8_18" type="button" class="btn btn-dark">Chapter</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="custom-section-sub-header text-center">
-                    Submitted Manuscripts
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-0">
-                    </div>
-                    <div class="col-lg-12 p-5 publication-card">
-                        <ul>
-                            <li class="p-4">
-                                <div>
-                                    <h4>Crystal Structure Prediction: a Benchmark and Modern Evaluation</h4>
-                                    <h6>
-                                        Lai Wei, 
-                                        <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
-                                        Rongzhi Dong, 
-                                        Nihang Fu, 
-                                        Yuqi Song, 
-                                        Edirisuriya Siriwardane, 
-                                        Meiling Xu, 
-                                        Chris Wolverton, 
-                                        Jianjun Hu 
-                                    </h6>
-                                    <h6>2023</h6>
-                                    <div class="row publication-card-tags">
-                                        <div class="col-xs-12">
-                                            <a href="https://arxiv.org/pdf/2407.00733" type="button" class="btn btn-dark">PDF (arxiv)</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                </ul>
             </div>
         </div>
+
+        <!-- ===== Book Chapters ===== -->
+        <div class="custom-section-sub-header text-center">
+            Book Chapters
+        </div>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-12 p-5 publication-card">
+                <ul>
+                    <li class="p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img class="img-fluid publication-image w-50" src="assets/images/publication_images/EML.webp" alt="Book Chapter image">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Evolutionary Machine Learning in Science and Engineering</h4>
+                                <h6> 
+                                    Jianjun Hu, 
+                                    Yuqi Song, 
+                                    <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
+                                    Lai Wei, 
+                                    Rongzhi Dong, 
+                                    Siddharth Gianey
+                                </h6>
+                                <h6><i>Handbook of Evolutionary Machine Learning</i></h6>
+                                <h6>2023</h6>
+                                <div class="row publication-card-tags">
+                                    <div class="col-xs-12">
+                                        <a href="https://doi.org/10.1007/978-981-99-3814-8_18" class="btn btn-dark">Chapter</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== Submitted Manuscripts ===== -->
+        <div class="custom-section-sub-header text-center">
+        Submitted Manuscripts
+        </div>
+        <div class="row align-items-center justify-content-between">
+        <div class="col-lg-12 p-5 publication-card">
+            <ul>
+                <li class="p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <img class="img-fluid publication-image" src="assets/images/publication_images/FACET.png" alt="CSPBench">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Facet: Highly Efficient E(3)-Equivariant Networks for Interatomic Potentials</h4>
+                            <h6>
+                                Nicholas Miklaucic, 
+                                Lai Wei, 
+                                Rongzhi Dong, 
+                                Nihang Fu, 
+                                <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
+                                Qingyang Li, 
+                                Sourin Dey, 
+                                Victor Fung
+                                Jianjun Hu 
+                            </h6>
+                            <h6>2023</h6>
+                            <div class="row publication-card-tags">
+                                <div class="col-xs-12">
+                                    <a href="https://arxiv.org/pdf/2509.08418" class="btn btn-dark">PDF (arxiv)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <img class="img-fluid publication-image w-25" src="assets/images/publication_images/TCSP2.png" alt="CSPBench">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>TCSP 2.0: Template Based Crystal Structure Prediction with Improved Oxidation State Prediction and Chemistry Heuristics</h4>
+                            <h6>
+                                Lai Wei, 
+                                Rongzhi Dong, 
+                                Nihang Fu, 
+                                <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
+                                Jianjun Hu 
+                            </h6>
+                            <h6>2023</h6>
+                            <div class="row publication-card-tags">
+                                <div class="col-xs-12">
+                                    <a href="https://arxiv.org/pdf/2503.23183" class="btn btn-dark">PDF (arxiv)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <img class="img-fluid publication-image w-75" src="assets/images/publication_images/DataDrivenPolyMorph.png" alt="CSPBench">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Data-Driven Topological Analysis of Polymorphic Crystal Structures</h4>
+                            <h6>
+                                Sourin Dey, 
+                                Nicholas Miklaucic,
+                                <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
+                                Rongzhi Dong, 
+                                Lai Wei, 
+                                Qinyang Li, 
+                                Nihang Fu, 
+                                Jianjun Hu
+                            </h6>
+                            <h6>2023</h6>
+                            <div class="row publication-card-tags">
+                                <div class="col-xs-12">
+                                    <a href="https://arxiv.org/pdf/2508.10270" class="btn btn-dark">PDF (arxiv)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center">
+                            <img class="img-fluid publication-image" src="assets/images/publication_images/CSPBench.png" alt="CSPBench">
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Crystal Structure Prediction: a Benchmark and Modern Evaluation</h4>
+                            <h6>
+                                Lai Wei, 
+                                <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
+                                Rongzhi Dong, 
+                                Nihang Fu, 
+                                Yuqi Song, 
+                                Edirisuriya Siriwardane, 
+                                Meiling Xu, 
+                                Chris Wolverton, 
+                                Jianjun Hu 
+                            </h6>
+                            <h6>2023</h6>
+                            <div class="row publication-card-tags">
+                                <div class="col-xs-12">
+                                    <a href="https://arxiv.org/pdf/2407.00733" class="btn btn-dark">PDF (arxiv)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
     </section>
     <!-- Publications end -->
 
