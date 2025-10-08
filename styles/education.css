@@ -1,4 +1,10 @@
 /* === Base desktop styles (unchanged) === */
+
+#education {
+  scroll-margin-top: 60px; /* makes anchor links land below navbar */
+  margin-top: 60px; /* pushes the visible section down */
+}
+
 .education-timeline {
   border-radius: 12px; /* adjust 8–16px for taste */
   overflow: hidden; /* ensures image corners follow the rounding */
@@ -28,7 +34,7 @@
 .education-text h5,
 .education-text h6 {
   font-family: "Open Sans Condensed", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .education-card img.edu-img {
@@ -36,6 +42,12 @@
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .education-card .col-auto.text-center.flex-column {
+    display: none !important;
+  }
 }
 
 /* === Medium / Small screens (≤768px): text smaller, same image size === */

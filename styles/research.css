@@ -1,0 +1,36 @@
+/* === Research Metrics Widget === */
+.research-metrics {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  max-width: 450px;
+  transition: all 0.3s ease;
+}
+
+.research-metrics:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.research-metrics h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #212529;
+  font-size: 1.2rem;
+}
+
+.research-metrics ul li {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.research-metrics small {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .research-metrics {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

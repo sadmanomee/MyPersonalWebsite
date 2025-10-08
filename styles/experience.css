@@ -38,6 +38,12 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 992px) {
+  .experience-card .col-auto.text-center.flex-column {
+    display: none !important;
+  }
+}
+
 /* === Medium / Small screens (≤768px): bigger image, smaller text === */
 @media (max-width: 768px) {
   .experience-card .row {
@@ -48,7 +54,7 @@
   .experience-card img.exp-img {
     display: block;
     margin: 0 auto 20px;
-    max-width: 95%; /* larger image */
+    max-width: 60%; /* larger image */
   }
 
   /* make text smaller */
@@ -82,7 +88,7 @@
 /* === Extra-small screens (≤480px): smaller image and text === */
 @media (max-width: 480px) {
   .experience-card img.exp-img {
-    max-width: 60%;
+    max-width: 45%;
     margin-bottom: 15px;
   }
 

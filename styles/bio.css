@@ -3,6 +3,11 @@
     font-size: 14pt;
 } */
 
+#bio {
+  scroll-margin-top: 60px; /* makes anchor links land below navbar */
+  margin-top: 60px; /* pushes the visible section down */
+}
+
 .custom-bio-links {
   display: flex;
   align-items: stretch;
@@ -86,7 +91,6 @@
   #bio .me-round-img {
     width: 40vw;
     max-width: 180px;
-    margin-bottom: 20px;
   }
 
   #bio .custom-starter-text {
@@ -110,19 +114,46 @@
   }
 }
 
+/* Tighten spacing on small / extra-small screens (phones) */
 @media (max-width: 576px) {
+  /* Make image flush with next element */
   #bio .me-round-img {
-    width: 50vw;
-    max-width: 150px;
+    display: block;
+    margin: 0 auto 0 !important; /* no bottom margin */
+    padding-bottom: 0 !important;
   }
 
+  /* Remove Bootstrap column padding applied by p-* classes on small screens */
+  #bio .col-lg-8,
+  #bio .col-md-8,
+  #bio .col-12 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Reduce heading margins so it sits close to the image */
   #bio .custom-starter-text {
-    font-size: 1.1rem;
+    margin-top: 20px !important;
+    margin-bottom: 6px !important;
+    line-height: 1.15;
   }
 
+  /* Reduce paragraph top margin/padding */
   #bio .custom-paragraph-text {
-    font-size: 0.85rem;
-    line-height: 1.4;
+    margin-top: 4px !important;
+    padding-top: 0 !important;
+  }
+
+  /* If you have an intermediate wrapper (e.g., .p-5 on parent), remove that top padding on small screens */
+  #bio .p-5 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* If there are utility margins on sibling columns (e.g., from Bootstrap cols), ensure they don't add spacing */
+  #bio .row > [class*="col-"] {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
 
