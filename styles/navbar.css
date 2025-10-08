@@ -1,3 +1,4 @@
+/* Base style (desktop / large screens) */
 .custom-nav {
   line-height: 2em;
   border-top: solid 3px #fff;
@@ -6,4 +7,31 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
+  font-size: 1rem; /* base font size for large screens */
+}
+
+/* Tablet (≤992px) — slightly smaller font, tighter spacing */
+@media (max-width: 992px) {
+  .custom-nav {
+    line-height: 1.8em;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (≤768px) — smaller font and less letter spacing */
+@media (max-width: 768px) {
+  .custom-nav {
+    line-height: 1.6em;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Extra small phones (≤480px) — compact, readable text */
+@media (max-width: 480px) {
+  .custom-nav {
+    line-height: 1.4em;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+  }
 }

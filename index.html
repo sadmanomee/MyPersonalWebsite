@@ -107,6 +107,14 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- dark mode button -->
+            <!-- <div class="d-flex align-items-center ms-2">
+                <button id="darkModeToggle" class="btn btn-sm btn-outline-light rounded-circle" aria-pressed="false" title="Toggle dark mode">
+                    <i id="darkModeIcon" class="fa-solid fa-moon"></i>
+                </button>
+            </div> -->
+
         </div>
     </nav>
 
@@ -151,7 +159,7 @@
                     align-items-center      : aligns items in center
                     justify-content-between : for column content justification
                 -->
-                <div class="col-md-4 custom-section-header">
+                <div class="col-lg-4 custom-section-header">
                     <!--
                         col-md-5              : space taken by that column (5 out of 12 spaces) allotted for each row
                         custom-section-header : extra styles written in section.css
@@ -163,7 +171,7 @@
                         class="me-round-img img-fluid"
                     >
                 </div>
-                <div class="col-md-8 p-5 p-md-4 p-sm-3 p-2">
+                <div class="col-lg-8 p-5 p-md-4 p-sm-3 p-2">
                     <h3 class="custom-starter-text typewrite-effect">
                         <!--
                             custom-starter-text : extra styles written in section.css
@@ -182,8 +190,6 @@
                         
                         
                         I am born and raised in <a href="https://goo.gl/maps/qD9WutJxYvWKutJw8" style="text-decoration: none;">Bangladesh</a>. I have completed my B.S. in Computer Science and Engineering from Bangladesh University of Engineering and Technology in 2019. My aim is to become an effective and impactful Deep Learning Scientist.
-                        <br><br>
-                        (This website is not optimized for cellphones yet. Please view it in a desktop browser)
                     </p>
 					<ul class="custom-bio-links">
                         <!--
@@ -235,10 +241,10 @@
                     <div id="news-updates" class="mt-4">
                         <h5 class="fw-bold mb-3">News / Updates</h5>
                         <ul class="list-unstyled">
-                            <li><strong>[September 29, 2025]</strong> Passed Ph.D. Comprehensive Exam.</li>
+                            <li><strong>[September 29, 2025]</strong> Passed Ph.D. comprehensive exam.</li>
                             <li><strong>[September 26, 2025]</strong> Our polymorphism crystal structure prediction paper publihsed in <em>Advanced Science</em>.</li>
-                            <li><strong>[August 8, 2025]</strong> Completed Summer Internship at KLA.</li>
-                            <li><strong>[May 12, 2025]</strong> Started Internship at KLA.</li>
+                            <li><strong>[August 8, 2025]</strong> Completed summer internship at KLA.</li>
+                            <li><strong>[May 12, 2025]</strong> Started summer internship at KLA.</li>
                         </ul>
                     </div>
 
@@ -606,7 +612,7 @@
                                         <img class="img-fluid exp-img" src="./assets/images/logos/UofSC_logo.png" alt="UofSC logo">
                                     </div>
                                     <div class="col-md-8 experience-text">
-                                        <h4>Graduate Teaching Assistant</h4>
+                                        <h4>Graduate Instructional Assistant</h4>
                                         <h5>Course: Introduction to Computer Concepts (CSCE 101) & General Applications Programming (CSCE 102)
                                             <br>Department of Computer Science and Engineering
                                             <br>University of South Carolina
@@ -697,14 +703,118 @@
             Publications
         </div>
 
+        <!-- === Featured Publications Carousel === -->
+        <div id="featured-publications" class="mb-5">
+        <h4 class="custom-section-sub-header text-center mb-4">Featured Papers</h4>
+
+        <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-inner text-center">
+
+            <!-- Slide 1: ParetoCSP2 -->
+            <div class="carousel-item active">
+                <a href="https://doi.org/10.1002/advs.202510792" target="_blank" rel="noopener">
+                <img
+                    src="assets/images/publication_images/ParetoCSP2.png"
+                    class="img-fluid featured-img"
+                    alt="ParetoCSP2"
+                    loading="lazy"
+                >
+                </a>
+                <div class="featured-caption mt-3">
+                <h5 class="fw-bold mb-1">Polymorphism Crystal Structure Prediction with Adaptive Space Group Diversity Control</h5>
+                <p class="text-muted mb-1"><em>Advanced Science</em> — 2025</p>
+                <p class="featured-desc mb-0">
+                    Developed adaptive space-group diversity control to enhance polymorphism prediction for crystal structure discovery.
+                </p>
+                </div>
+            </div>
+
+            <!-- Slide 2: OOD Benchmark -->
+            <div class="carousel-item">
+                <a href="https://www.nature.com/articles/s41524-024-01316-4" target="_blank" rel="noopener">
+                <img
+                    src="assets/images/publication_images/OOD_Benchmark.png"
+                    class="img-fluid featured-img"
+                    alt="OOD Benchmark"
+                    loading="lazy"
+                >
+                </a>
+                <div class="featured-caption mt-3">
+                <h5 class="fw-bold mb-1">Structure-Based Out-of-Distribution Materials Property Prediction: A Benchmark Study</h5>
+                <p class="text-muted mb-1"><em>npj Computational Materials</em> — 2024</p>
+                <p class="featured-desc mb-0">
+                    Benchmarked deep learning models for out-of-distribution materials property prediction and proposed new evaluation standards.
+                </p>
+                </div>
+            </div>
+
+            <!-- Slide 3: DeeperGATGNN -->
+            <div class="carousel-item">
+                <a href="https://doi.org/10.1016/j.patter.2022.100491" target="_blank" rel="noopener">
+                <img
+                    src="assets/images/publication_images/DeeperGATGNN.png"
+                    class="img-fluid featured-img"
+                    alt="DeeperGATGNN"
+                    loading="lazy"
+                >
+                </a>
+                <div class="featured-caption mt-3">
+                <h5 class="fw-bold mb-1">Scalable Deeper Graph Neural Networks for Materials Property Prediction</h5>
+                <p class="text-muted mb-1"><em>Patterns</em> — 2022</p>
+                <p class="featured-desc mb-0">
+                    Designed deeper graph attention architectures for high-performance and scalable materials property prediction.
+                </p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators mt-3">
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Publications filter bar (place this above your <ul> of publications) -->
+        <div id="pub-filter" class="mb-4">
+            <div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                <label for="pubYear" class="visually-hidden">Year</label>
+                <select id="pubYear" class="form-select form-select-sm" aria-label="Filter by year" style="min-width:110px;">
+                    <option value="all">All years</option>
+                </select>
+
+                <label for="pubJournal" class="visually-hidden">Journal</label>
+                <input id="pubJournal" class="form-control form-control-sm" placeholder="Journal or keyword" style="min-width:170px;" aria-label="Filter by journal or keyword">
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 align-items-center">
+                <div id="year-chips" class="d-flex gap-1 flex-wrap"></div>
+                <button id="pubClear" class="btn btn-sm btn-outline-secondary">Clear</button>
+                </div>
+            </div>
+        </div>
+
+
+
         <!-- ===== Journal Papers ===== -->
         <div class="custom-section-sub-header text-center">
             Journal Papers
         </div>
         <div class="row align-items-center justify-content-between">
-            <div class="col-lg-12 p-5 publication-card">
+           <div class="col-lg-12 p-5 p-md-4 p-sm-3 publication-card">
                 <ul>
-
                     <li class="p-4">
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center">
@@ -797,7 +907,7 @@
                     <li class="p-4">
                         <div class="row align-items-center">
                             <div class="col-md-4 text-center">
-                                <img class="img-fluid publication-image w-50" src="assets/images/publication_images/ParetoCSP.png" alt="ParetoCSP image">
+                                <img class="img-fluid publication-image w-75" src="assets/images/publication_images/ParetoCSP.png" alt="ParetoCSP image">
                             </div>
                             <div class="col-md-8">
                                 <h4>Crystal Structure Prediction Using Neural Network Potential and Age-Fitness Pareto Genetic Algorithm</h4>
@@ -1170,7 +1280,7 @@
                                 Victor Fung
                                 Jianjun Hu 
                             </h6>
-                            <h6>2023</h6>
+                            <h6>2025</h6>
                             <div class="row publication-card-tags">
                                 <div class="col-xs-12">
                                     <a href="https://arxiv.org/pdf/2509.08418" class="btn btn-dark">PDF (arxiv)</a>
@@ -1194,7 +1304,7 @@
                                 <span style="font-weight:bold; color: grey">Sadman Sadeed Omee</span>,
                                 Jianjun Hu 
                             </h6>
-                            <h6>2023</h6>
+                            <h6>2025</h6>
                             <div class="row publication-card-tags">
                                 <div class="col-xs-12">
                                     <a href="https://arxiv.org/pdf/2503.23183" class="btn btn-dark">PDF (arxiv)</a>
@@ -1221,7 +1331,7 @@
                                 Nihang Fu, 
                                 Jianjun Hu
                             </h6>
-                            <h6>2023</h6>
+                            <h6>2025</h6>
                             <div class="row publication-card-tags">
                                 <div class="col-xs-12">
                                     <a href="https://arxiv.org/pdf/2508.10270" class="btn btn-dark">PDF (arxiv)</a>
@@ -1249,7 +1359,7 @@
                                 Chris Wolverton, 
                                 Jianjun Hu 
                             </h6>
-                            <h6>2023</h6>
+                            <h6>2024</h6>
                             <div class="row publication-card-tags">
                                 <div class="col-xs-12">
                                     <a href="https://arxiv.org/pdf/2407.00733" class="btn btn-dark">PDF (arxiv)</a>
@@ -1616,7 +1726,11 @@
     <footer class="p-5 bg-dark text-white text-center position-relative">
         <div class="continer">
             <!-- <p class="lead">Copyright &copy; 2022 | Sadman Sadeed Omee</p> -->
-            <p class="lead">2022 | Sadman Sadeed Omee</p>
+            <p class="lead mb-1">2022 | Sadman Sadeed Omee</p>
+            <p class="small text-secondary mb-0">
+                This website is fully coded and maintained by Sadman Sadeed Omee.
+            </p>
+
             <a href="#" class="position-absolute bottom-0 end-0 p-5">
                 <i class="fas fa-arrow-circle-up h1 custom-footer"></i>
             </a>
@@ -1674,5 +1788,250 @@
                 });
         }
     </script> -->
+
+    <!-- <script>
+        (function(){
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const icon = document.getElementById('darkModeIcon');
+
+        // apply persisted preference
+        const saved = localStorage.getItem('darkMode');
+        if (saved === 'on') {
+            document.body.classList.add('dark-mode');
+            toggleBtn.setAttribute('aria-pressed', 'true');
+            if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+        }
+
+        // toggle handler
+        function setDarkMode(on) {
+            if (on) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('darkMode','on');
+            toggleBtn.setAttribute('aria-pressed','true');
+            if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+            } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode','off');
+            toggleBtn.setAttribute('aria-pressed','false');
+            if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+            }
+        }
+
+        toggleBtn.addEventListener('click', function(){
+            const isOn = document.body.classList.contains('dark-mode');
+            setDarkMode(!isOn);
+        });
+
+        // keyboard accessibility: Enter/Space toggles
+        toggleBtn.addEventListener('keydown', function(e){
+            if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleBtn.click();
+            }
+        });
+        })();
+    </script> -->
+
+
+    <!-- Publications filter js -->
+    <script>
+        (function(){
+        // config: selector for your publication list items
+        const pubListSelector = '.publication-card ul li';
+        const yearSelect = document.getElementById('pubYear');
+        const journalInput = document.getElementById('pubJournal');
+        const clearBtn = document.getElementById('pubClear');
+        const chipsContainer = document.getElementById('year-chips');
+
+        // utility: normalize text
+        const norm = s => (s||'').toString().trim().toLowerCase();
+
+        // find all li elements
+        const items = Array.from(document.querySelectorAll(pubListSelector));
+        if (!items.length) return;
+
+        // try to extract year and journal for each item by scanning its h6s or text nodes
+        const years = new Set();
+
+        items.forEach(li => {
+            // default values
+            let year = '';
+            let journal = '';
+
+            // search for a 4-digit year pattern inside the li
+            const text = li.innerText || '';
+            const yearMatch = text.match(/\b(20\d{2}|19\d{2})\b/);
+            if (yearMatch) year = yearMatch[0];
+
+            // search for italicized journal in h6 <i>JournalName</i>
+            const iElem = li.querySelector('h6 i');
+            if (iElem) {
+            journal = iElem.innerText.trim();
+            } else {
+            // fallback: try first h6 text not containing year
+            const h6s = li.querySelectorAll('h6');
+            for (const h6 of h6s) {
+                const h6Text = h6.innerText || '';
+                if (!h6Text.match(/\b(20\d{2}|19\d{2})\b/)) {
+                journal = h6Text.trim();
+                break;
+                }
+            }
+            }
+
+            // store as data attributes for later use
+            if (year) {
+            li.dataset.pubYear = year;
+            years.add(year);
+            } else {
+            li.dataset.pubYear = '';
+            }
+            li.dataset.pubJournal = journal || '';
+            li.dataset.pubSearchText = (li.innerText || '').trim();
+        });
+
+        // populate year select sorted descending
+        const sortedYears = Array.from(years).sort((a,b)=> b - a);
+        sortedYears.forEach(y=>{
+            const opt = document.createElement('option');
+            opt.value = y;
+            opt.textContent = y;
+            yearSelect.appendChild(opt);
+        });
+
+        // create year chips for quick filtering (shows up to 6 years)
+        sortedYears.slice(0,8).forEach(y=>{
+            const chip = document.createElement('button');
+            chip.type = 'button';
+            chip.className = 'chip btn btn-sm';
+            chip.textContent = y;
+            chip.dataset.year = y;
+            chip.addEventListener('click', ()=> {
+            // toggle chip active state
+            const currentlyActive = chip.classList.contains('active');
+            // clear all chips
+            chipsContainer.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            if (!currentlyActive) {
+                chip.classList.add('active');
+                yearSelect.value = y;
+            } else {
+                yearSelect.value = 'all';
+            }
+            applyFilter();
+            });
+            chipsContainer.appendChild(chip);
+        });
+
+        // onchange handlers
+        yearSelect.addEventListener('change', ()=> {
+            // toggle chip highlight
+            const val = yearSelect.value;
+            chipsContainer.querySelectorAll('.chip').forEach(c => {
+            c.classList.toggle('active', c.dataset.year === val);
+            });
+            applyFilter();
+        });
+
+        journalInput.addEventListener('input', () => {
+            applyFilter();
+        });
+
+        clearBtn.addEventListener('click', () => {
+            yearSelect.value = 'all';
+            journalInput.value = '';
+            chipsContainer.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+            applyFilter();
+        });
+
+        // main filter function
+        function applyFilter(){
+            const yearVal = yearSelect.value;
+            const journalVal = norm(journalInput.value);
+
+            items.forEach(li => {
+            const liYear = li.dataset.pubYear || '';
+            const liJournal = norm(li.dataset.pubJournal || '');
+            const liSearchText = norm(li.dataset.pubSearchText || '');
+
+            let visible = true;
+            if (yearVal !== 'all' && yearVal !== '') {
+                visible = (liYear === yearVal);
+            }
+            if (visible && journalVal) {
+                // match in journal or anywhere in publication text
+                visible = liJournal.includes(journalVal) || liSearchText.includes(journalVal);
+            }
+
+            li.style.display = visible ? '' : 'none';
+            });
+
+            // optional: if none visible, show a message
+            showNoResultsMessage();
+        }
+
+        // create / manage "no results" message
+        function showNoResultsMessage(){
+            const parentUl = items[0].closest('ul');
+            if (!parentUl) return;
+            let msg = parentUl.querySelector('.no-results');
+            const anyVisible = items.some(li => li.style.display !== 'none');
+            if (!anyVisible) {
+            if (!msg) {
+                msg = document.createElement('li');
+                msg.className = 'no-results p-3 text-muted';
+                msg.style.listStyle = 'none';
+                msg.innerHTML = 'No publications found for the selected filter.';
+                parentUl.appendChild(msg);
+            }
+            } else {
+            if (msg) msg.remove();
+            }
+        }
+
+        // initial filter (show all)
+        applyFilter();
+
+        // Accessibility: allow Enter on journal input to focus filter (no-op)
+        journalInput.addEventListener('keydown', (e)=> {
+            if (e.key === 'Enter') {
+            e.preventDefault();
+            applyFilter();
+            }
+        });
+
+        })();
+    </script>
+
+    <!-- Featured publications carousel js -->
+    <script>
+        (function () {
+            const carouselEl = document.getElementById('featuredCarousel');
+            if (!carouselEl) return;
+
+            // Initialize (Bootstrap auto-initializes via data attributes, but ensure interval and touch).
+            const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+            interval: 6000,
+            pause: 'hover',
+            ride: 'carousel',
+            touch: true,
+            keyboard: true
+            });
+
+            // Make indicators keyboard-friendly: toggle on Enter/Space
+            const indicators = carouselEl.querySelectorAll('.carousel-indicators [data-bs-slide-to]');
+            indicators.forEach(btn => {
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                btn.click();
+                }
+            });
+            });
+        })();
+    </script>
+
+
+
+
 </body>
 </html>

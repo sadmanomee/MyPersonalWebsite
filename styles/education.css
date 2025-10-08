@@ -1,51 +1,18 @@
-/* .education-timeline {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  background-color: #ffffff;
-  margin-bottom: 20px;
-  box-shadow: 10px 10px 5px #aaaaaa;
-}
-
-.badge-education {
-  padding-right: 0.6em;
-  padding-left: 1.2em;
-  border-radius: 10rem;
-  border: 2px solid transparent;
-  border-color: #323a45;
-  color: #323a45;
-}
-
-.education-text h4,
-.education-text h5,
-.education-text h6 {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-weight: 600;
-}
-
-.education-card img.edu-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .education-card .row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .education-card img.edu-img {
-    max-width: 60%;
-    margin: 0 auto 20px;
-  }
-} */
-
 /* === Base desktop styles (unchanged) === */
 .education-timeline {
+  border-radius: 12px; /* adjust 8–16px for taste */
+  overflow: hidden; /* ensures image corners follow the rounding */
   border: 1px solid rgba(0, 0, 0, 0.125);
   background-color: #ffffff;
   margin-bottom: 20px;
   box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+/* Optional: smooth corners on hover (slight lift) */
+.education-timeline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease-in-out;
 }
 
 .badge-education {

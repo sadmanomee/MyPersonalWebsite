@@ -4,6 +4,16 @@
   background-color: #ffffff;
   margin-bottom: 20px;
   box-shadow: 10px 10px 5px #aaaaaa;
+  /* 🎯 Rounded corners */
+  border-radius: 12px; /* adjust 8–16px for preference */
+  overflow: hidden; /* ensures inner images follow the curve */
+  transition: all 0.25s ease;
+}
+
+/* Subtle hover lift (optional) */
+.publication-card ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
 .publication-card ul li:last-child {
@@ -36,6 +46,31 @@
   margin-bottom: 10px;
 }
 
+/* Publications filter - subtle styling */
+#pub-filter .form-select,
+#pub-filter .form-control {
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+}
+
+#pub-filter #year-chips .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(33, 37, 41, 0.06);
+  cursor: pointer;
+  border: 1px solid rgba(33, 37, 41, 0.06);
+}
+
+#pub-filter #year-chips .chip.active {
+  background: rgba(33, 37, 41, 0.12);
+  border-color: rgba(33, 37, 41, 0.14);
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .publication-card .row {
     flex-direction: column;
@@ -45,5 +80,350 @@
   .publication-card img.publication-image {
     max-width: 80%;
     margin: 0 auto 20px;
+  }
+}
+
+/* ---------- Responsive: Tablet (768px - 991.98px) ---------- */
+/* keep two-column feel but slightly reduce sizes and spacing */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .publication-card ul li {
+    margin-bottom: 16px;
+    padding: 12px; /* add inner breathing room */
+  }
+
+  /* within each card, keep row layout but shrink image */
+  .publication-card .row {
+    align-items: center;
+  }
+
+  .publication-card img.publication-image {
+    max-width: 80%; /* scale down image relative to its column */
+    width: 80%;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  /* slightly smaller headings and text for tablet */
+  .publication-card h3 {
+    font-size: 1.05rem;
+  }
+  .publication-card h4 {
+    font-size: 1rem;
+  }
+  .publication-card h5 {
+    font-size: 0.95rem;
+  }
+  .publication-card h6 {
+    font-size: 0.9rem;
+  }
+
+  .publication-card-tags {
+    flex-wrap: wrap; /* allow buttons to wrap neatly */
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  .publication-card-tags a {
+    font-size: 10pt;
+    padding: 6px 10px;
+    margin: 4px;
+  }
+}
+
+/* ---------- Responsive: Mobile (<= 767.98px) ---------- */
+/* stack content; center image; keep text left-aligned for readability */
+@media (max-width: 767.98px) {
+  .publication-card .row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* allow image to be centered, text will span full width */
+    gap: 8px;
+  }
+
+  /* center image but allow it to scale down */
+  .publication-card img.publication-image {
+    max-width: 80%;
+    width: 80%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  /* ensure text blocks remain left aligned */
+  .publication-card .publication-text,
+  .publication-card h3,
+  .publication-card h4,
+  .publication-card h5,
+  .publication-card h6,
+  .publication-card .card-text,
+  .publication-card .publication-card-tags {
+    text-align: left;
+    width: 100%;
+  }
+
+  /* reduce font sizes for mobile */
+  .publication-card h3 {
+    font-size: 1rem;
+  }
+  .publication-card h4 {
+    font-size: 0.98rem;
+  }
+  .publication-card h5 {
+    font-size: 0.92rem;
+  }
+  .publication-card h6 {
+    font-size: 0.88rem;
+  }
+  .publication-card p,
+  .publication-card .card-text {
+    font-size: 0.9rem;
+  }
+
+  /* tags/buttons wrap and align left */
+  .publication-card-tags {
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .publication-card-tags a {
+    font-size: 9.5pt;
+    margin: 4px 6px 4px 0;
+  }
+
+  /* reduce card padding and shadow for smaller screens */
+  .publication-card ul li {
+    margin-bottom: 12px;
+    padding: 10px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* ---------- Extra small tweaks for very narrow phones (<=420px) ---------- */
+@media (max-width: 420px) {
+  .publication-card img.publication-image {
+    max-width: 80%;
+    width: 80%;
+  }
+
+  .publication-card h3 {
+    font-size: 0.98rem;
+  }
+  .publication-card h4 {
+    font-size: 0.96rem;
+  }
+  .publication-card h5 {
+    font-size: 0.9rem;
+  }
+  .publication-card h6 {
+    font-size: 0.86rem;
+  }
+  .publication-card p,
+  .publication-card .card-text {
+    font-size: 0.86rem;
+  }
+  .publication-card-tags a {
+    font-size: 9pt;
+  }
+}
+
+/* small screens: stack controls */
+@media (max-width: 575.98px) {
+  #pub-filter .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  #pub-filter .form-select,
+  #pub-filter .form-control {
+    width: 100% !important;
+  }
+
+  #pub-filter #year-chips {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  #pub-filter .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  #pub-filter .form-select,
+  #pub-filter .form-control {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.4rem;
+  }
+  #pub-filter #year-chips .chip {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+  #pub-filter .btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* === Featured publications simplified style === */
+#featured-publications {
+  text-align: center;
+}
+
+#featured-publications .featured-img {
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+#featured-publications a:hover .featured-img {
+  transform: scale(1.03);
+}
+
+#featured-publications .featured-caption {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#featured-publications h5 {
+  font-size: 1.1rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #111;
+}
+
+#featured-publications .featured-desc {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Indicators */
+#featured-publications .carousel-indicators [data-bs-target] {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#featured-publications .carousel-indicators .active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* --- Responsive design for 3 screen sizes --- */
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+  #featured-publications .featured-img {
+    max-height: 320px;
+  }
+  #featured-publications h5 {
+    font-size: 1.15rem;
+  }
+  #featured-publications .featured-desc {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet (576–991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  #featured-publications .featured-img {
+    max-height: 240px;
+  }
+  #featured-publications h5 {
+    font-size: 1rem;
+  }
+  #featured-publications .featured-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile (≤575.98px) */
+@media (max-width: 575.98px) {
+  #featured-publications .featured-img {
+    max-height: 180px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #featured-publications h5 {
+    font-size: 0.95rem;
+  }
+  #featured-publications .featured-desc {
+    font-size: 0.88rem;
+  }
+}
+
+/* === Featured Publications: circle outline around carousel arrows === */
+
+/* position & sizing of the arrow controls */
+#featured-publications .carousel-control-prev,
+#featured-publications .carousel-control-next {
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* make the arrows visible & encircle them */
+#featured-publications .carousel-control-prev-icon,
+#featured-publications .carousel-control-next-icon {
+  background-color: transparent; /* no fill */
+  border: 2px solid #000; /* black circle outline */
+  border-radius: 50%; /* circular border */
+  width: 44px;
+  height: 44px;
+  padding: 8px; /* arrow inset inside circle */
+  background-size: 40% 40%; /* smaller arrow icon inside */
+  filter: invert(0%) brightness(0%); /* black arrow icon */
+  transition: all 0.3s ease;
+}
+
+/* hover effects for interactivity */
+#featured-publications .carousel-control-prev-icon:hover,
+#featured-publications .carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+/* optional: subtle shadow for depth */
+#featured-publications .carousel-control-prev-icon,
+#featured-publications .carousel-control-next-icon {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* dots (indicators) remain below description */
+#featured-publications .carousel-indicators {
+  position: static;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+#featured-publications .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+#featured-publications .carousel-indicators .active {
+  background-color: #000;
+}
+
+/* --- Responsive tuning --- */
+@media (max-width: 575.98px) {
+  #featured-publications .carousel-control-prev,
+  #featured-publications .carousel-control-next {
+    width: 48px;
+    height: 48px;
+  }
+
+  #featured-publications .carousel-control-prev-icon,
+  #featured-publications .carousel-control-next-icon {
+    width: 36px;
+    height: 36px;
+    border-width: 1.5px;
+    padding: 6px;
+  }
+
+  #featured-publications .carousel-indicators {
+    margin-top: 0.8rem;
   }
 }

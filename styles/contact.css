@@ -34,8 +34,84 @@
   font-size: 12pt;
 }
 
-/* @media only screen and (max-width: 576px) {
-    .contact-icon{
-        font-size: 10pt;
-    }
-} */
+/* -----------------------------
+   Responsive adjustments
+   ----------------------------- */
+
+/* Tablet: medium screens (576px - 991.98px)
+   Slightly reduce icon + text size, tighten gaps so layout feels compact */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .contact-links li {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .contact-icon {
+    font-size: 22pt;
+  }
+
+  .contact-text {
+    font-size: 11pt;
+  }
+
+  /* allow the contact list to sit comfortably in narrow columns */
+  .contact-links {
+    max-width: 100%;
+  }
+}
+
+/* Mobile: small screens (<= 575.98px)
+   Make rows touch-friendly: slightly bigger tap area, centered, icons smaller */
+@media (max-width: 575.98px) {
+  .contact-links {
+    display: block;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center each row for balanced look on phones */
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 6px 4px; /* increase tap area */
+  }
+
+  .contact-links li a {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact-icon {
+    font-size: 18pt;
+  }
+
+  .contact-text {
+    font-size: 10.5pt;
+  }
+
+  /* soften hover transform for touch devices (no hover, but safe) */
+  .contact-icon:hover {
+    transform: none;
+  }
+}
+
+/* Very small devices (<= 420px) - tighten text slightly */
+@media (max-width: 420px) {
+  .contact-icon {
+    font-size: 16.5pt;
+  }
+  .contact-text {
+    font-size: 10pt;
+  }
+  .contact-links li {
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 5px 4px;
+  }
+}

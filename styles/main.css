@@ -1,5 +1,20 @@
+/* Default for large/medium screens */
 body::before {
   display: block;
   content: "";
-  height: 60px;
+  height: 60px; /* matches your fixed-top navbar height */
+}
+
+/* Smaller navbars on mobile (adjust spacing) */
+@media (max-width: 768px) {
+  body::before {
+    height: 50px; /* slightly smaller for collapsed navbar */
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  body::before {
+    height: 45px;
+  }
 }

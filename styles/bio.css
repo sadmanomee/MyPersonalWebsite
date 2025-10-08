@@ -80,6 +80,7 @@
   /* Stack image on top and center it */
   #bio .row {
     text-align: center;
+    flex-direction: column;
   }
 
   #bio .me-round-img {
