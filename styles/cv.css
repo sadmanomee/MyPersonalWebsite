@@ -1,0 +1,4 @@
+#cv {
+  scroll-margin-top: 60px; /* makes anchor links land below navbar */
+  margin-top: 80px; /* pushes the visible section down */
+}

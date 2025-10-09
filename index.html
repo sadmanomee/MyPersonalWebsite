@@ -43,6 +43,9 @@
     <link rel="stylesheet" href="styles/education.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/publications.css">
+    <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="styles/cv.css">
+    <link rel="stylesheet" href="styles/blogs.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/footer.css">
 
@@ -97,7 +100,7 @@
                         <a href="#publications" class="nav-link">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#cv" class="nav-link">Resume</a>
+                        <a href="#cv" class="nav-link">Résumé</a>
                     </li>
                     <li class="nav-item">
                         <a href="#blogs" class="nav-link">Blogs</a>
@@ -663,12 +666,12 @@
                 <div class="col-lg-2">
                     <!-- empty space -->
                 </div>
-                <div class="col-lg-10 p-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3">
+                <div class="col-lg-10 pt-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3">
                     <div class="row">
                         <h3 class="custom-starter-text">
-                            My Ph.D. research focuses on AI-Driven materials science.
+                            My Ph.D. research focuses on AI-driven materials science.
                         </h3>
-                        <p class="custom-paragraph-text section-details-text">
+                        <p class="custom-paragraph-text section-details-text pb-3">
                             As a Ph.D. candidate in Computer Science at the <a href="https://en.wikipedia.org/wiki/University_of_South_Carolina" style="text-decoration: none;">University of South Carolina</a>, I conduct research at the intersection of AI/ML and materials science. My work focuses on developing advanced machine learning methods to accelerate the discovery and design of novel materials. I specialize in graph neural networks (GNNs), transformers, and diffusion models for solving core materials informatics challenges such as <a href="https://en.wikipedia.org/wiki/Crystal_structure_prediction" style="text-decoration: none;">crystal structure prediction (CSP)</a>, materials property prediction, and generative modeling of materials. <br><br>
 
                             My research particularly emphasizes AI-driven approaches for crystal structure prediction — a long-standing challenge in materials science similar to the protein structure prediction problem. I draw inspiration from breakthroughs such as DeepMind's <a href="https://www.deepmind.com/research/highlighted-research/alphafold" style="text-decoration: none;">AlphaFold2</a> (won 2024 Nobel Prize in Chemisty) and aim to extend similar paradigms to crystalline systems. By integrating scientific domain knowledge with state-of-the-art AI models, I seek to enable automated materials discovery and accelerate innovation in materials design.<br><br>
@@ -676,15 +679,15 @@
                             My current research focuses on developing a diffusion model for conditional generation of 3D crystal polyhedra (building blocks of crystals), given their chemical compositions (e.g., NaCl, SrTiO<sub>3</sub>, Cu<sub>4</sub>FeGe<sub>2</sub>S<sub>7</sub>).  Successful prediction of the polyhedra of a crystal can lead to accurate prediction of the full crystal structure and provide an efficient solution to the CSP problem. I am inspired by successful diffusion model-based approaches in similar problems, such as molecular and protein structure prediction.
                         </p>
                         <!-- === Research Metrics Widget === -->
-                        <div id="research-metrics" class="p-3 mt-3" style="max-width:420px; border-radius:10px; background:#f8f9fa; border:1px solid rgba(0,0,0,0.06);">
-                            <h6 class="mb-2" style="font-weight:700; margin-bottom:8px;">Research Metrics</h6>
-                            <div id="research-metrics-body">
+                        <div class="research-metrics" class="p-3 mt-3" style="max-width:420px; border-radius:10px; background:#f8f9fa; border:1px solid rgba(0,0,0,0.06);">
+                            <h6 class="p-1 mb-1 mt-1" style="font-weight:700; margin-bottom:8px;">Research Metrics</h6>
+                            <div class="research-metrics-body p-1">
                                 <div id="rm-loading" style="opacity:0.7">Loading metrics…</div>
                                 <div id="rm-values" style="display:none;">
-                                <div><strong>Citations:</strong> <span id="citations-count">—</span></div>
-                                <div><strong>h-index:</strong> <span id="hindex-count">—</span></div>
-                                <div><strong>i10-index:</strong> <span id="i10-count">—</span></div>
-                                <div style="margin-top:8px; font-size:0.85rem; color:#666;">Source: Google Scholar</div>
+                                    <div><strong>Citations:</strong> <span id="citations-count">—</span></div>
+                                    <div><strong>h-index:</strong> <span id="hindex-count">—</span></div>
+                                    <div><strong>i10-index:</strong> <span id="i10-count">—</span></div>
+                                    <div style="margin-top:8px; font-size:0.85rem; color:#666;">Source: Google Scholar</div>
                                 </div>
                                 <div id="rm-error" style="display:none; color:#b00; margin-top:6px; font-size:0.9rem;"></div>
                             </div>
@@ -1412,7 +1415,7 @@
     <section id="cv" class="p-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3" style="background-color: #F3F3F3;">
         <div class="container">
             <div class="custom-section-header pb-4 text-center">
-                CV / Resume
+                Résumé
             </div>
             <object data="assets/cv/Resume_Sadman_Sadeed_Omee.pdf#view=FitH" type="application/pdf" width="100%" height="800px"> 
                 <p>It appears you don't have a PDF plugin for this browser.

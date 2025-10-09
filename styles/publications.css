@@ -1,3 +1,8 @@
+#publications {
+  scroll-margin-top: 40px; /* makes anchor links land below navbar */
+  margin-top: 80px; /* pushes the visible section down */
+}
+
 .publication-card ul li {
   list-style: none;
   border: 1px solid rgba(0, 0, 0, 0.125);

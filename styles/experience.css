@@ -1,4 +1,8 @@
-/* === Base desktop styles (unchanged) === */
+#experience {
+  scroll-margin-top: 60px; /* makes anchor links land below navbar */
+  margin-top: 80px; /* pushes the visible section down */
+}
+
 .experience-timeline {
   border-radius: 12px; /* adjust 8–16px for taste */
   overflow: hidden; /* ensures image corners follow the rounding */
