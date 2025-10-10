@@ -332,10 +332,10 @@
     max-height: 240px;
   }
   #featured-publications h5 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   #featured-publications .featured-desc {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -347,10 +347,10 @@
     margin: 0 auto;
   }
   #featured-publications h5 {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
   #featured-publications .featured-desc {
-    font-size: 0.88rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -422,10 +422,10 @@
 
   #featured-publications .carousel-control-prev-icon,
   #featured-publications .carousel-control-next-icon {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-width: 1.5px;
-    padding: 6px;
+    padding: 4px;
   }
 
   #featured-publications .carousel-indicators {

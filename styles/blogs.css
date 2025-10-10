@@ -2,3 +2,35 @@
   scroll-margin-top: 60px; /* makes anchor links land below navbar */
   margin-top: 80px; /* pushes the visible section down */
 }
+
+/* Desktop ≥1200px */
+@media (min-width: 1200px) {
+  #blogs h2.custom-starter-text {
+    font-size: 1.8rem;
+  }
+  #blogs h5.custom-paragraph-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet 768–1199px */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #blogs h2.custom-starter-text {
+    font-size: 1.2rem;
+  }
+  #blogs h5.custom-paragraph-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile <768px */
+@media (max-width: 767.98px) {
+  #blogs h2.custom-starter-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  #blogs h5.custom-paragraph-text {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}

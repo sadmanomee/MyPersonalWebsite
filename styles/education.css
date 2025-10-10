@@ -1,7 +1,5 @@
-/* === Base desktop styles (unchanged) === */
-
 #education {
-  scroll-margin-top: 60px; /* makes anchor links land below navbar */
+  scroll-margin-top: 75px; /* makes anchor links land below navbar */
   margin-top: 80px; /* pushes the visible section down */
 }
 
@@ -44,7 +42,7 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .education-card .col-auto.text-center.flex-column {
     display: none !important;
   }

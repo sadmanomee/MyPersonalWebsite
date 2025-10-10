@@ -8,12 +8,13 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Default subtle shadow */
   transition: all 0.3s ease;
 }
 
 .research-metrics:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deeper hover shadow */
 }
 
 @media (max-width: 768px) {
