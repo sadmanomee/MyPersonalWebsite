@@ -306,10 +306,15 @@
       style="background-color: #f3f3f3"
     >
       <div class="container">
+        <div class="custom-section-header pt-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3">
+          Education
+        </div>
         <div
           class="row align-items-center justify-content-between education-card"
         >
-          <div class="col-lg-4 custom-section-header">Education</div>
+          <div class="col-lg-2">
+            <!-- empty space -->
+          </div>
           <div class="col-lg-8 p-5">
             <div class="row">
               <div class="col-auto text-center flex-column d-none d-sm-flex">
@@ -432,6 +437,9 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-2">
+            <!-- empty space -->
+          </div>
         </div>
       </div>
     </section>
@@ -446,7 +454,7 @@
         <div
           class="row align-items-center justify-content-between experience-card"
         >
-          <div class="col-lg-2">
+          <div class="col-lg-1">
             <!-- empty space -->
           </div>
           <div class="col-lg-10 p-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3">
@@ -742,6 +750,9 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-1">
+            <!-- empty space -->
+          </div>
         </div>
       </div>
     </section>
@@ -760,7 +771,7 @@
           >
             Research
           </div>
-          <div class="col-lg-2">
+          <div class="col-lg-1">
             <!-- empty space -->
           </div>
           <div class="col-lg-10 pt-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3">
@@ -863,6 +874,9 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-lg-1">
+            <!-- empty space -->
           </div>
         </div>
       </div>
@@ -1970,7 +1984,11 @@
     <!-- Blog end-->
 
     <!-- Contact start -->
-    <section id="contact" class="p-5">
+    <section
+      id="contact"
+      class="p-5 p-md-4 p-sm-3 p-2 px-sm-4 px-3"
+      style="background-color: #f5f7fa"
+    >
       <div class="container">
         <div class="custom-section-header py-5 text-center">Contact</div>
         <div class="row align-items-center justify-content-between">
@@ -2348,6 +2366,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
     <script>
       var popoverTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="popover"]')
@@ -2563,7 +2582,7 @@
             li.style.display = visible ? "" : "none";
           });
 
-          // optional: if none visible, show a message
+          // if none visible, show a message
           showNoResultsMessage();
         }
 

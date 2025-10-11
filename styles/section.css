@@ -156,7 +156,7 @@
   }
 }
 
-/* --- Optional: Extra-small very narrow devices (<=420px) — tiny tweaks --- */
+/* --- Extra-small very narrow devices (<=420px) — tiny tweaks --- */
 @media (max-width: 420px) {
   .custom-section-header {
     font-size: 20pt;

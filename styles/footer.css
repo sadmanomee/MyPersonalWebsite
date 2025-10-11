@@ -23,7 +23,7 @@ footer p.small:hover {
   }
 }
 
-/* Optional: disable hover animation on touch screens */
+/* disable hover animation on touch screens */
 @media (hover: none) and (pointer: coarse) {
   .custom-footer:hover {
     animation: none;
@@ -31,7 +31,7 @@ footer p.small:hover {
   }
 }
 
-/* Optional: smaller grow animation on very small screens */
+/* smaller grow animation on very small screens */
 @media (max-width: 480px) {
   @keyframes grow {
     20% {

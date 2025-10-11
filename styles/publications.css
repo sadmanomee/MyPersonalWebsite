@@ -15,7 +15,7 @@
   transition: all 0.25s ease;
 }
 
-/* Subtle hover lift (optional) */
+/* Subtle hover lift */
 .publication-card ul li:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
@@ -386,7 +386,7 @@
   transform: scale(1.1);
 }
 
-/* optional: subtle shadow for depth */
+/* subtle shadow for depth */
 #featured-publications .carousel-control-prev-icon,
 #featured-publications .carousel-control-next-icon {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);

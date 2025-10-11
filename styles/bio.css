@@ -5,7 +5,7 @@
 
 #bio {
   scroll-margin-top: 60px; /* makes anchor links land below navbar */
-  margin-top: 60px; /* pushes the visible section down */
+  margin-top: 40px; /* pushes the visible section down */
 }
 
 .custom-bio-links {
@@ -43,7 +43,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Optional hover effect */
+/* hover effect */
 .me-round-img:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
@@ -163,7 +163,7 @@
   border-left: 4px solid #212529;
   padding: 15px 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 #news-updates h5 {

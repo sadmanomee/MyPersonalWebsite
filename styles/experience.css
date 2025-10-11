@@ -12,7 +12,7 @@
   box-shadow: 10px 10px 5px #aaaaaa;
 }
 
-/* Optional: smooth corners on hover (slight lift) */
+/* smooth corners on hover (slight lift) */
 .experience-timeline:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -81,7 +81,7 @@
     width: 100%;
   }
 
-  /* optional: tighter line spacing for compact look */
+  /* tighter line spacing for compact look */
   .experience-text h4,
   .experience-text h5,
   .experience-text h6 {
