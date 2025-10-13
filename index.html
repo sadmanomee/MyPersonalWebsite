@@ -37,6 +37,18 @@
       rel="stylesheet"
     />
 
+    <!-- roboto font (google font) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- inter font (google font) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- lilita one font (google font) -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
@@ -222,10 +234,10 @@
               <li>
                 <a
                   href="javascript:"
-                  data-bs-placement="top"
+                  id="emails-popover-trigger"
+                  aria-label="Emails"
                   data-bs-toggle="popover"
-                  title="Emails"
-                  data-bs-content="omee.sadman@gmail.com (personal) somee@email.sc.edu (instituitional)"
+                  data-bs-placement="top"
                 >
                   <i class="fa-solid fa-envelope"></i>
                 </a>
@@ -248,13 +260,18 @@
                 </a>
               </li>
               <li>
+                <a href="https://orcid.org/0000-0002-1016-8072">
+                  <i class="fa-brands fa-orcid"></i>
+                </a>
+              </li>
+              <li>
                 <a href="https://www.facebook.com/sadman.omee.7/">
                   <i class="fa-brands fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/sadmanomee">
-                  <i class="fa-brands fa-twitter"></i>
+                <a href="https://x.com/sadmanomee">
+                  <i class="fa-brands fa-x-twitter"></i>
                 </a>
               </li>
               <li>
@@ -826,8 +843,7 @@
               </p>
               <!-- === Research Metrics Widget === -->
               <div
-                class="research-metrics"
-                class="p-3 mt-3"
+                class="research-metrics p-3"
                 style="
                   max-width: 420px;
                   border-radius: 10px;
@@ -1951,7 +1967,7 @@
           data="assets/cv/Resume_Sadman_Sadeed_Omee.pdf#view=FitH"
           type="application/pdf"
           width="100%"
-          height="800px"
+          height="800"
         >
           <p>
             It appears you don't have a PDF plugin for this browser. No
@@ -2252,18 +2268,25 @@
               </div>
             </div>
 
-            <!-- Twitter link -->
+            <!-- X link -->
             <div class="row py-2">
               <div class="col-2 text-end">
-                <a class="contact-link" href="https://twitter.com/sadmanomee">
-                  <i class="fa-brands fa-twitter contact-icon"></i>
+                <a class="contact-link" href="https://x.com/sadmanomee">
+                  <i class="fa-brands fa-x-twitter contact-icon"></i>
                 </a>
               </div>
               <div class="col-10 text-start contact-text pt-1">
-                <a class="contact-link" href="https://twitter.com/sadmanomee">
+                <a class="contact-link" href="https://x.com/sadmanomee">
                   <div class="float-start">Follow me on &nbsp;</div>
                   <div class="fw-bolder float-start" style="color: white">
-                    <span style="background-color: #00acee">Twitter</span>
+                    <span
+                      style="
+                        background-color: #000;
+                        color: #fff;
+                        padding: 2px 6px;
+                      "
+                      >X</span
+                    >
                   </div>
                 </a>
               </div>
@@ -2346,7 +2369,7 @@
 
     <!-- footer start -->
     <footer class="p-5 bg-dark text-white text-center position-relative">
-      <div class="continer">
+      <div class="container">
         <!-- <p class="lead">Copyright &copy; 2022 | Sadman Sadeed Omee</p> -->
         <p class="lead mb-1">2022 | Sadman Sadeed Omee</p>
         <p class="small text-secondary mb-0">
@@ -2367,13 +2390,146 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- custom js for email copy popover -->
     <script>
-      var popoverTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="popover"]')
-      );
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl);
-      });
+      (function () {
+        // Emails to display / copy
+        const emails = [
+          { label: "Personal", value: "omee.sadman@gmail.com" },
+          { label: "Institutional", value: "somee@email.sc.edu" },
+        ];
+
+        const trigger = document.getElementById("emails-popover-trigger");
+
+        // Build HTML content for the popover (buttons have class .copy-email and data-email attr)
+        function buildPopoverContent() {
+          return `
+        <div class="emails-popover-content" style="min-width:220px;">
+          ${emails
+            .map(
+              (e, i) => `
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:8px;">
+              <div style="flex:1; font-size:0.95rem; overflow-wrap:anywhere;">
+                <strong style="font-weight:600; display:block;">${escapeHtml(
+                  e.label
+                )}</strong>
+                <span class="email-value" data-email-index="${i}">${escapeHtml(
+                e.value
+              )}</span>
+              </div>
+              <div style="flex:0 0 auto;">
+                <button type="button" class="btn btn-sm btn-outline-secondary copy-email" data-email="${escapeHtml(
+                  e.value
+                )}" aria-label="Copy ${escapeHtml(e.label)} email">
+                  Copy
+                </button>
+              </div>
+            </div>
+          `
+            )
+            .join("")}
+        </div>
+      `;
+        }
+
+        // Very small escape helper for safety when injecting strings into HTML
+        function escapeHtml(unsafe) {
+          return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+        }
+
+        // Initialize popover via JS so we can set sanitize:false (we are controlling content)
+        const pop = new bootstrap.Popover(trigger, {
+          html: true,
+          content: buildPopoverContent(),
+          sanitize: false, // we controlled the html string; keep it false so the button markup is preserved
+          container: "body",
+          trigger: "click",
+          placement: "top",
+        });
+
+        // When the popover is shown, attach copy handlers to the buttons inside it
+        document.addEventListener("shown.bs.popover", function (evt) {
+          // Ensure it's our popover
+          if (evt.target !== trigger) return;
+
+          // Buttons are placed into the document (container: 'body'), so we query the DOM
+          const popoverEl = document.body.querySelector(".popover");
+          if (!popoverEl) return;
+
+          // Attach event listeners to copy buttons (delegation or attach directly)
+          const copyButtons = popoverEl.querySelectorAll(".copy-email");
+          copyButtons.forEach((btn) => {
+            // guard against multiple attachments
+            if (btn.dataset.hasListener) return;
+            btn.dataset.hasListener = "1";
+
+            btn.addEventListener("click", async function (e) {
+              e.stopPropagation(); // stop the click from bubbling to document handler that hides the popover
+              const email = btn.getAttribute("data-email");
+              try {
+                await navigator.clipboard.writeText(email);
+                // provide quick feedback
+                const original = btn.innerHTML;
+                btn.innerHTML = "Copied ✓";
+                btn.disabled = true;
+                setTimeout(() => {
+                  btn.innerHTML = original;
+                  btn.disabled = false;
+                }, 1200);
+              } catch (err) {
+                console.error("Clipboard copy failed", err);
+                btn.innerHTML = "Failed";
+                setTimeout(() => {
+                  btn.innerHTML = "Copy";
+                }, 1200);
+              }
+            });
+          });
+        });
+
+        // If the trigger is clicked and the popover is already visible, re-render content
+        // (useful if emails change dynamically)
+        trigger.addEventListener("click", function () {
+          const instance = bootstrap.Popover.getInstance(trigger);
+          if (!instance) return;
+          // rebuild content each time we show to keep values fresh
+          instance._config.content = buildPopoverContent();
+          // (bootstrap reads content on open; no extra call needed)
+        });
+
+        // Click outside to close popover(s)
+        document.addEventListener("click", function (e) {
+          // If click landed inside any popover, keep it open
+          if (e.target.closest(".popover")) return;
+          // If click is on a popover trigger (the icon), let the popover toggle logic handle it
+          if (e.target.closest('[data-bs-toggle="popover"]')) return;
+
+          // Hide all popovers on the page
+          document
+            .querySelectorAll('[data-bs-toggle="popover"]')
+            .forEach((el) => {
+              const instance = bootstrap.Popover.getInstance(el);
+              if (instance) instance.hide();
+            });
+        });
+
+        // Also hide popovers on ESC press (common UX)
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            document
+              .querySelectorAll('[data-bs-toggle="popover"]')
+              .forEach((el) => {
+                const instance = bootstrap.Popover.getInstance(el);
+                if (instance) instance.hide();
+              });
+          }
+        });
+      })();
     </script>
 
     <!-- fontawsome cdn js -->

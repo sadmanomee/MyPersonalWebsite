@@ -7,7 +7,7 @@
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  width: 300px;
+  width: 320px;
   padding: 0px;
 }
 
@@ -186,5 +186,35 @@
   }
   #news-updates ul li {
     font-size: 0.9rem;
+  }
+}
+
+/* Default (desktop/tablet) */
+.emails-popover-content {
+  font-size: 0.95rem;
+}
+
+.emails-popover-content .copy-email {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+}
+
+/* Smaller text and tighter layout on small screens */
+@media (max-width: 576px) {
+  .emails-popover-content {
+    font-size: 0.82rem;
+  }
+
+  .emails-popover-content strong {
+    font-size: 0.85rem;
+  }
+
+  .emails-popover-content .copy-email {
+    font-size: 0.7rem;
+    padding: 1px 6px;
+  }
+
+  .emails-popover-content > div {
+    margin-bottom: 6px !important;
   }
 }
