@@ -145,19 +145,12 @@
             </li>
           </ul>
         </div>
-
-        <!-- dark mode button -->
-        <!-- <div class="d-flex align-items-center ms-2">
-                <button id="darkModeToggle" class="btn btn-sm btn-outline-light rounded-circle" aria-pressed="false" title="Toggle dark mode">
-                    <i id="darkModeIcon" class="fa-solid fa-moon"></i>
-                </button>
-            </div> -->
       </div>
     </nav>
 
     <!-- cover photo start -->
     <!-- <section>
-            <img class="img-fluid" src="./assets/images/me.jpg" alt="Me in Blue Ridge Parway, North Carolina, United States">
+            <img class="img-fluid" src="./assets/images/me.jpg" alt="Sadman Sadeed Omee">
     </section> -->
     <!-- cover photo end -->
 
@@ -514,14 +507,14 @@
                       <h6>January 2022 - Present</h6>
                       <div class="text-justify">
                         <ul>
-                          <li>
+                          <!-- <li>
                             Received stipend support through a research
                             assistantship from January 2022 to July 2023;
                             continuing research while receiving teaching
                             assistant stipend support in Fall and Spring
                             semesters and internship salary support in Summer
                             semesters from August 2023 onward.
-                          </li>
+                          </li> -->
                           <li>
                             Conducting research on artificial intelligence
                             techniques such as graph neural networks,
@@ -2324,21 +2317,6 @@
               </div>
             </div>
 
-            <!-- Reddit link -->
-            <!-- <div class="row py-2">
-                        <div class="col-2 text-end">
-                            <a class="contact-link" href="https://www.reddit.com/user/sadmanomee">
-                                <i class="fa-brands fa-reddit contact-icon"></i>
-                            </a>
-                        </div>
-                        <div class="col-10 text-start contact-text pt-1">
-                            <a class="contact-link" href="https://www.reddit.com/user/sadmanomee">
-                                <div class="float-start">Follow me on &nbsp;</div>
-                                <div class="fw-bolder float-start" style="color:white;"><span style="background-color: #ff4500">Reddit</span></div>
-                            </a>
-                        </div>
-                    </div> -->
-
             <!-- Pinterest link -->
             <div class="row py-2">
               <div class="col-2 text-end">
@@ -2537,68 +2515,6 @@
       src="https://kit.fontawesome.com/2969c94fc8.js"
       crossorigin="anonymous"
     ></script>
-
-    <!-- js for copying to clipboard by clicking -->
-    <!-- <script>
-        function copyToClipboard() {
-            // Get the text field
-            var copyText = document.getElementById("personalEmail").textContent.trim();
-            alert(copyText);
-
-            // Copy the text inside the text field
-            navigator.clipboard
-                .writeText(copyText)
-                .then(() => {
-                    alert("successfully copied");
-                })
-                .catch(() => {
-                    alert("something went wrong");
-                });
-        }
-    </script> -->
-
-    <!-- <script>
-        (function(){
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const icon = document.getElementById('darkModeIcon');
-
-        // apply persisted preference
-        const saved = localStorage.getItem('darkMode');
-        if (saved === 'on') {
-            document.body.classList.add('dark-mode');
-            toggleBtn.setAttribute('aria-pressed', 'true');
-            if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
-        }
-
-        // toggle handler
-        function setDarkMode(on) {
-            if (on) {
-            document.body.classList.add('dark-mode');
-            localStorage.setItem('darkMode','on');
-            toggleBtn.setAttribute('aria-pressed','true');
-            if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
-            } else {
-            document.body.classList.remove('dark-mode');
-            localStorage.setItem('darkMode','off');
-            toggleBtn.setAttribute('aria-pressed','false');
-            if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
-            }
-        }
-
-        toggleBtn.addEventListener('click', function(){
-            const isOn = document.body.classList.contains('dark-mode');
-            setDarkMode(!isOn);
-        });
-
-        // keyboard accessibility: Enter/Space toggles
-        toggleBtn.addEventListener('keydown', function(e){
-            if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            toggleBtn.click();
-            }
-        });
-        })();
-    </script> -->
 
     <!-- Publications filter js -->
     <script>
