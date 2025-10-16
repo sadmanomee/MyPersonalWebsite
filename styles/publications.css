@@ -432,3 +432,105 @@
     margin-top: 0.8rem;
   }
 }
+
+/* Citation badge styling - rounded, responsive text visibility, color-matched to your buttons */
+.citation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 999px; /* fully rounded */
+  background-color: #f8f9fa; /* light neutral like your buttons' background */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: #212529; /* default text color (dark) */
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: background-color 0.12s ease, transform 0.08s ease;
+}
+
+/* emoji small */
+.citation-badge .cb-emoji {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+/* number is prominent */
+.citation-badge .cb-number {
+  font-weight: 700;
+}
+
+/* label only visible on larger screens (responsive) */
+.citation-badge .cb-label {
+  display: none;
+  font-weight: 500;
+  margin-left: 4px;
+  color: #495057;
+}
+
+/* hover - match btn-dark accent lightly */
+.citation-badge:hover {
+  background-color: #e9ecef;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+/* focus accessibility */
+.citation-badge:focus {
+  outline: 3px solid rgba(0, 123, 255, 0.18);
+  outline-offset: 2px;
+}
+
+/* RESPONSIVE RULES: mobile / tablet / desktop breakpoints */
+/* Mobile: (small devices) - show only emoji + number, compact */
+@media (max-width: 575.98px) {
+  .citation-badge {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+  .citation-badge .cb-label {
+    display: none;
+  }
+  .citation-badge .cb-number {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet: show a short label but keep compact */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .citation-badge {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+  .citation-badge .cb-label {
+    display: inline;
+    content: "cite";
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop: show full label "citations" */
+@media (min-width: 992px) {
+  .citation-badge {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+  .citation-badge .cb-label {
+    display: inline;
+  }
+}
+
+/* If appended inside actions container, ensure it doesn't wrap awkwardly */
+.publication-card-tags .citation-badge {
+  margin-top: 8px;
+}
+
+/* For very narrow action columns (buttons stacked), keep left margin small */
+@media (max-width: 420px) {
+  .publication-card-tags .citation-badge {
+    margin-left: 0;
+    margin-top: 6px;
+  }
+}

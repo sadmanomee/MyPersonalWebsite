@@ -1955,12 +1955,13 @@
       style="background-color: #f3f3f3"
     >
       <div class="container">
-        <div class="custom-section-header pb-4 text-center">Résumé</div>
+        <div class="custom-section-header p-4 text-center">Résumé</div>
         <object
           data="assets/cv/Resume_Sadman_Sadeed_Omee.pdf#view=FitH"
           type="application/pdf"
           width="100%"
           height="800"
+          class="mb-4"
         >
           <p>
             It appears you don't have a PDF plugin for this browser. No
@@ -2891,6 +2892,229 @@
           } catch (err) {
             console.error("Fetch/parsing error:", err);
             showError("Failed to fetch metrics. See console for details.");
+          }
+        })();
+      });
+    </script>
+
+    <!-- Publication citation annotation js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        (async function annotatePaperCitations() {
+          const AUTHOR_ID = "m-oDmqAAAAAJ";
+          const APPS_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbyZhHx4G3rVNmID5EzZnBEnQfQVjOYYwkK0Ntko23HLoJqXuHmy4o9Rb-WsvSOtB3TpHg/exec";
+          const fetchURL = `${APPS_SCRIPT_URL}?author_id=${encodeURIComponent(
+            AUTHOR_ID
+          )}`;
+
+          // DOM selectors
+          const pubSelector = ".publication-card ul li"; // your publication items
+          const titleSelector = "h4";
+          const yearSelector = "h6";
+
+          // small helper: normalize strings for matching
+          function normalize(s) {
+            return (s || "")
+              .toLowerCase()
+              .replace(/<[^>]*>/g, "") // remove HTML if any
+              .replace(/[^\w\s]/g, " ") // remove punctuation -> space
+              .replace(/\s+/g, " ")
+              .trim();
+          }
+
+          // token overlap similarity (simple, fast fuzzy)
+          function tokenOverlapScore(a, b) {
+            if (!a || !b) return 0;
+            const ta = new Set(a.split(" ").filter(Boolean));
+            const tb = new Set(b.split(" ").filter(Boolean));
+            if (ta.size === 0 || tb.size === 0) return 0;
+            let inter = 0;
+            ta.forEach((t) => {
+              if (tb.has(t)) inter++;
+            });
+            const denom = Math.max(ta.size, tb.size);
+            return inter / denom; // [0,1]
+          }
+
+          // Insert badge only once; small badge creation
+          function createBadgeHtml(count, url) {
+            const span = document.createElement("a");
+            span.href = url || "#";
+            span.target = "_blank";
+            span.rel = "noopener";
+            span.className = "citation-badge";
+            span.style.cssText =
+              "display:inline-block; margin-left:10px; padding:4px 8px; border-radius:12px; border:1px solid rgba(0,0,0,0.06); background:#f8f9fa; color:#333; font-size:0.85rem; text-decoration:none;";
+            span.innerHTML = `🔎 <strong style="font-weight:600">${count}</strong> citation${
+              count === 1 ? "" : "s"
+            }`;
+            return span;
+          }
+
+          // Find Google Scholar citation id inside the li (if link to scholar exists)
+          function findScholarCitationId(li) {
+            // look through anchors for scholar citation_for_view= or citation link
+            const anchors = Array.from(li.querySelectorAll("a[href]"));
+            for (const a of anchors) {
+              const href = a.href || "";
+              // pattern from SerpApi sample: view_citation ... &citation_for_view=...
+              const m = href.match(/citation_for_view=([^&]+)/i);
+              if (m) return decodeURIComponent(m[1]);
+              // other possibility: google scholar view_citation link has 'citation_for_view='
+            }
+            return null;
+          }
+
+          try {
+            const res = await fetch(fetchURL, { cache: "no-store" });
+            if (!res.ok) {
+              console.error(
+                "Citation proxy network error:",
+                res.status,
+                res.statusText
+              );
+              return;
+            }
+            const payload = await res.json();
+
+            const articles = Array.isArray(payload.articles)
+              ? payload.articles
+              : [];
+            if (!articles.length) {
+              console.info(
+                "No articles returned from proxy; nothing to annotate."
+              );
+              return;
+            }
+
+            // Build article index: normalized title -> article, also map citation_id -> article
+            const titleIndex = new Map();
+            const idIndex = new Map();
+
+            for (const art of articles) {
+              const normTitle = normalize(art.title);
+              const citationValue = art.cited_by?.value ?? null;
+              const citLink = art.cited_by?.link || art.link || null;
+              const citation_id = art.citation_id || null;
+              const year = art.year ? String(art.year) : null;
+
+              // store minimal info
+              const info = {
+                title: art.title || "",
+                normTitle,
+                citationValue,
+                citLink,
+                citation_id,
+                year,
+              };
+
+              if (normTitle) titleIndex.set(normTitle, info);
+              if (citation_id) idIndex.set(citation_id, info);
+            }
+
+            // For fast fuzzy lookup, also produce an array of titles
+            const titleEntries = Array.from(titleIndex.values());
+
+            // iterate DOM publication list
+            const lis = Array.from(document.querySelectorAll(pubSelector));
+            if (!lis.length) {
+              console.info(
+                "No publication list items found in DOM for selector",
+                pubSelector
+              );
+              return;
+            }
+
+            lis.forEach((li) => {
+              try {
+                const h4 = li.querySelector(titleSelector);
+                if (!h4) return;
+                // avoid adding twice
+                if (li.querySelector(".citation-badge")) return;
+
+                const domTitleRaw = h4.innerText || "";
+                const domNormTitle = normalize(domTitleRaw);
+
+                // try scholar citation id match first (if li includes scholar links)
+                let matched = null;
+                const domCitationId = findScholarCitationId(li);
+                if (domCitationId && idIndex.has(domCitationId)) {
+                  matched = idIndex.get(domCitationId);
+                }
+
+                // next: exact normalized title match
+                if (!matched && titleIndex.has(domNormTitle)) {
+                  matched = titleIndex.get(domNormTitle);
+                }
+
+                // next: substring contains or vice-versa
+                if (!matched) {
+                  for (const art of titleEntries) {
+                    if (!art.normTitle) continue;
+                    if (
+                      domNormTitle.includes(art.normTitle) ||
+                      art.normTitle.includes(domNormTitle)
+                    ) {
+                      matched = art;
+                      break;
+                    }
+                  }
+                }
+
+                // finally: token overlap fuzzy, take best scoring > threshold
+                if (!matched) {
+                  let best = null;
+                  let bestScore = 0;
+                  for (const art of titleEntries) {
+                    if (!art.normTitle) continue;
+                    const score = tokenOverlapScore(
+                      domNormTitle,
+                      art.normTitle
+                    );
+                    if (score > bestScore) {
+                      bestScore = score;
+                      best = art;
+                    }
+                  }
+                  // threshold: require some meaningful overlap; 0.35 is conservative but adjust as needed
+                  if (best && bestScore >= 0.35) matched = best;
+                }
+
+                if (!matched) {
+                  // no match found; skip
+                  return;
+                }
+
+                // only add badge when citationValue is not null and > 0
+                const cval = matched.citationValue;
+                if (cval === null || cval === undefined) return;
+                const cnum = Number(cval);
+                if (!Number.isFinite(cnum) || cnum <= 0) return;
+
+                // create and insert badge; use cited-by link if available
+                const url =
+                  matched.citLink ||
+                  (matched.citation_id
+                    ? `https://scholar.google.com/citations?view_op=view_citation&citation_for_view=${encodeURIComponent(
+                        matched.citation_id
+                      )}`
+                    : "#");
+                const badge = createBadgeHtml(cnum, url);
+
+                // append to the title (h4) so it follows styling in your page
+                h4.appendChild(badge);
+              } catch (innerErr) {
+                console.error("Error annotating li:", innerErr);
+              }
+            });
+
+            console.info("Per-paper citation annotation complete.");
+          } catch (err) {
+            console.error(
+              "Failed to fetch/annotate citations from Apps Script proxy:",
+              err
+            );
           }
         })();
       });
