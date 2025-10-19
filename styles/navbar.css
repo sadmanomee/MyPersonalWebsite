@@ -10,6 +10,54 @@
   font-size: 1rem; /* base font size for large screens */
 }
 
+/* Hover effect: subtle lift + underline animation */
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link:focus {
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Animated underline using pseudo-element */
+.custom-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 4px;
+  height: 2px;
+  background: linear-gradient(90deg, #1f6feb, #4cc0ff);
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.25s cubic-bezier(0.45, 0, 0.15, 1),
+    opacity 0.2s ease-in-out, visibility 0s linear 0.25s; /* delay hiding to match animation */
+  border-radius: 2px;
+}
+
+/* Hover / focus: show and animate smoothly */
+.custom-nav .nav-link:hover::after,
+.custom-nav .nav-link:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 0.25s cubic-bezier(0.45, 0, 0.15, 1),
+    opacity 0.2s ease-in-out;
+}
+
+/* Disable underline + lift effect for collapsed mobile nav */
+@media (max-width: 767.98px) {
+  .custom-nav .nav-link::after {
+    display: none !important;
+  }
+
+  .custom-nav .nav-link:hover,
+  .custom-nav .nav-link:focus {
+    transform: none !important; /* prevent upward lift */
+  }
+}
+
 /* Tablet (≤992px) — slightly smaller font, tighter spacing */
 @media (max-width: 992px) {
   .custom-nav {
@@ -36,13 +84,7 @@
   }
 }
 
-/* show only on non-collapsed (md and up) */
-@media (max-width: 767.98px) {
-  .site-scroll-progress {
-    display: none !important;
-  }
-}
-
+/* Section Progress Bar Styles */
 .site-scroll-progress {
   position: fixed;
   left: 0;
@@ -61,4 +103,11 @@
   box-shadow: 0 2px 8px rgba(31, 111, 235, 0.12);
   will-change: width;
   transition: width 120ms linear;
+}
+
+/* show only on non-collapsed (md and up) */
+@media (max-width: 767.98px) {
+  .site-scroll-progress {
+    display: none !important;
+  }
 }
