@@ -35,3 +35,30 @@
     letter-spacing: 0.03em;
   }
 }
+
+/* show only on non-collapsed (md and up) */
+@media (max-width: 767.98px) {
+  .site-scroll-progress {
+    display: none !important;
+  }
+}
+
+.site-scroll-progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 6px; /* thickness */
+  background: transparent;
+  z-index: 1045; /* below nav (nav ~ 1030-1040 in some themes) but above page */
+  pointer-events: none;
+  transition: top 160ms ease;
+}
+
+.site-scroll-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1f6feb, #4cc0ff);
+  box-shadow: 0 2px 8px rgba(31, 111, 235, 0.12);
+  will-change: width;
+  transition: width 120ms linear;
+}

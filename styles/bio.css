@@ -68,11 +68,37 @@
   }
 }
 
-/* === Responsive adjustments === */
 @media (max-width: 992px) {
+  #bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centers vertically */
+    min-height: 100vh; /* make section full viewport height */
+    padding-top: 80px; /* room below fixed navbar */
+    padding-bottom: 40px;
+  }
+
+  #bio .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  #bio .row {
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+  }
+
   #bio .custom-paragraph-text {
     font-size: 0.95rem;
     line-height: 1.5;
+  }
+
+  #bio .me-round-img {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -155,10 +181,11 @@
 /* News / Updates styling */
 #news-updates {
   background-color: #f9f9f9;
+  text-align: left !important;
   border-left: 4px solid #212529;
   padding: 15px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #news-updates h5 {
@@ -170,6 +197,7 @@
   margin-bottom: 6px;
   font-size: 0.95rem;
   line-height: 1.5;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Responsive adjustments */
