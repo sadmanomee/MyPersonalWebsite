@@ -23,6 +23,7 @@
 
 .custom-bio-links a:hover {
   transform: translate(0, -10px);
+  transition: all 0.1s ease-in-out;
 }
 
 /* Responsive round profile image */
