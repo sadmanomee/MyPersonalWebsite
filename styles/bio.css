@@ -26,6 +26,82 @@
   transition: all 0.1s ease-in-out;
 }
 
+/* === Pronunciation Button Styles === */
+.pronunciation-btn {
+  border: none;
+  background: #f3f3f3;
+  color: #333;
+  font-size: 1.05rem;
+  border-radius: 50%;
+  padding: 8px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.pronunciation-btn:hover {
+  background: #212529;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.pronunciation-btn.playing {
+  background: #212529;
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Animated pulse effect while playing */
+.pronunciation-btn.playing::after {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(33, 37, 41, 0.4);
+  border-radius: 50%;
+  animation: pulse-ring 1s infinite ease-out;
+  z-index: -1;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* === Responsive tweaks for mobile === */
+@media (max-width: 768px) {
+  .pronunciation-btn {
+    font-size: 0.9rem;
+    padding: 6px;
+    margin-left: 6px;
+  }
+
+  .pronunciation-btn.playing::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pronunciation-btn {
+    font-size: 0.85rem;
+    padding: 5px;
+    margin-left: 4px;
+    box-shadow: none;
+  }
+}
+
 /* Responsive round profile image */
 .me-round-img {
   width: 29vw; /* scales with viewport width */

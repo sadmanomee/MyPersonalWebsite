@@ -196,10 +196,28 @@
             <h3 class="custom-starter-text typewrite-effect">
               <!--
                             custom-starter-text : extra styles written in section.css
-                            typewrite-effect : extra styles written in section.css
                         -->
               Hi, I am Sadman Sadeed Omee.
+              <button
+                id="play-pronunciation"
+                type="button"
+                class="pronunciation-btn"
+                aria-pressed="false"
+                aria-label="Play pronunciation of Sadman Sadeed Omee"
+                title="Play pronunciation"
+              >
+                <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+              </button>
+
+              <audio id="pron-audio" preload="none">
+                <source
+                  src="assets/audios/name-pronunciation.mp3"
+                  type="audio/mpeg"
+                />
+                Your browser does not support the audio element.
+              </audio>
             </h3>
+
             <p class="custom-paragraph-text section-details-text">
               <!--
                             custom-paragraph-text : extra styles written in section.css
@@ -3127,6 +3145,8 @@
         })();
       });
     </script>
+
+    <!-- Scroll progress bar js -->
     <script>
       (function () {
         // Create elements
@@ -3232,6 +3252,68 @@
         positionUnderNavbar();
         update();
       })();
+    </script>
+
+    <!-- Pronunciation audio player js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("play-pronunciation");
+        const audio = document.getElementById("pron-audio");
+        if (!btn || !audio) return;
+
+        async function togglePlay() {
+          try {
+            audio.load(); // load only when needed
+            if (audio.paused) {
+              await audio.play();
+              btn.classList.add("playing");
+              btn.setAttribute("aria-pressed", "true");
+              btn.title = "Pause pronunciation";
+            } else {
+              audio.pause();
+              audio.currentTime = 0;
+              btn.classList.remove("playing");
+              btn.setAttribute("aria-pressed", "false");
+              btn.title = "Play pronunciation";
+            }
+          } catch (err) {
+            console.error("Audio playback error:", err);
+            alert("Unable to play the audio. You can download it manually.");
+          }
+        }
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          togglePlay();
+        });
+
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === " " || e.key === "Enter") {
+            e.preventDefault();
+            togglePlay();
+          }
+        });
+
+        audio.addEventListener("ended", () => {
+          btn.classList.remove("playing");
+          btn.setAttribute("aria-pressed", "false");
+          btn.title = "Play pronunciation";
+          audio.currentTime = 0;
+        });
+
+        audio.addEventListener("error", () => {
+          console.error("Pronunciation audio failed to load.");
+          if (!document.getElementById("pron-download")) {
+            const dl = document.createElement("a");
+            dl.id = "pron-download";
+            dl.href = "assets/audios/name-pronunciation.mp3";
+            dl.textContent = "Download pronunciation";
+            dl.className = "btn btn-sm btn-link ms-2";
+            dl.target = "_blank";
+            btn.parentNode.insertBefore(dl, btn.nextSibling);
+          }
+        });
+      });
     </script>
   </body>
 </html>

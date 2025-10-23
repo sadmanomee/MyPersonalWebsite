@@ -56,17 +56,6 @@
   }
 }
 
-/* .typewrite-effect {
-  border-right: 0.1em solid black; 
-  width: 13em;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(20, end),
-    blink-caret 0.5s step-end infinite alternate;
-} */
-
-/* ---------- Responsive Section Typography (3 breakpoints) ---------- */
-
 /* --- Tablet: medium screens (approx 768px — 991.98px) --- */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .custom-section-header {
@@ -95,12 +84,6 @@
     line-height: 1.5;
     text-align: justify;
   }
-
-  /* typewriter: scale width constraint so it looks correct on tablet */
-  /* .typewrite-effect {
-    width: auto;
-    max-width: 38ch;
-  } */
 }
 
 /* --- Mobile: small screens (up to 767.98px) --- */
@@ -139,15 +122,6 @@
     text-align: justify;
   }
 
-  /* Tighten typewriter animation size and prevent overflow */
-  /* .typewrite-effect {
-    width: auto;
-    max-width: 34ch;
-    border-right: 0.08em solid rgba(0, 0, 0, 0.6);
-    white-space: nowrap;
-    overflow: hidden;
-  } */
-
   /* If you previously used large letter spacing or negative tracking, avoid it on mobile */
   .custom-starter-text,
   .custom-section-header,
@@ -176,8 +150,4 @@
     padding-right: 6px;
     text-align: justify;
   }
-  /* .typewrite-effect {
-    max-width: 30ch;
-    border-right-width: 0.06em;
-  } */
 }
