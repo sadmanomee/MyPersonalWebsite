@@ -190,7 +190,51 @@
               src="assets/images/me.jpg"
               alt="Sadman Sadeed Omee"
               class="me-round-img img-fluid"
+              data-bs-toggle="modal"
+              data-bs-target="#photoModal"
+              role="button"
+              aria-label="Open full-size photo: Me at Blue Ridge Parkway, North Carolina, USA"
             />
+
+            <!-- Full-size photo modal -->
+            <div
+              class="modal fade"
+              id="photoModal"
+              tabindex="-1"
+              aria-labelledby="photoModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-transparent border-0">
+                  <div class="modal-header border-0">
+                    <!-- Caption (top-left) -->
+                    <h5 id="photoModalLabel" class="modal-title text-white">
+                      Me at Blue Ridge Parkway, North Carolina, USA.
+                    </h5>
+
+                    <!-- Small close button (top-right) -->
+                    <button
+                      type="button"
+                      class="btn-close btn-close-white"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+
+                  <div class="modal-body text-center p-0">
+                    <img
+                      src="assets/images/me.jpg"
+                      alt="Sadman Sadeed Omee — full-size"
+                      class="img-fluid w-100"
+                      style="
+                        max-height: calc(100vh - 120px);
+                        object-fit: contain;
+                      "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-lg-8 p-5 p-md-4 p-sm-3 p-2">
             <h3 class="custom-starter-text typewrite-effect">
